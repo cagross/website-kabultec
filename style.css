@@ -1,0 +1,448 @@
+/*
+ Theme Name:   Spacious Child
+ Theme URI:    http://example.com/spacious/
+ Description:  Spacious Child Theme
+ Version:      1.2
+ Template:     spacious
+ Text Domain:  spacious
+*/
+
+/* Shrinks font of main menu so it fits on smaller laptops */
+@media screen and (max-width: 1025px) {
+ .main-navigation ul li a {font-size: 11px;}
+ }
+
+/* Shrinks the width of the main contact form.  This id was obtained from a view source on contact form page.  */
+#wpcf7-f4-p72-o1
+{
+    width:50%;
+}
+
+/* Shrinks settings of top 3 images so the fits on smaller laptops.*/
+@media screen and (max-width: 1025px) {
+  .tg-one-third {
+    margin: 0 2;
+  }
+  .tg-after-two-blocks-clearfix {
+    clear: none;
+  }
+}
+
+/* Edit the description on the homepage.*/
+#text-home-desc p {
+	font-size: 1.5em;
+	line-height: 150%;
+}
+
+ /* Shrinks size of the main menu so the fits on smaller laptops.*/
+@media screen and (max-width: 1367px) {
+	.main-navigation li {
+		font-size:14px;
+		padding-left: 12px;
+		padding-right: 12px;
+		color:red;
+  	}
+}
+
+/* Creates a new class with the same style as the theme widget <h3> titles.  I then apply this class via HTML in the text widget for "About The Founder: Nasrine Gross"  This is to allow the title to be a hyperlink. */
+.widget-title-border {
+	border-bottom: 2px solid #0FBE7C;
+	padding-bottom: 5px;
+}
+
+/*Ensures header image on home page is the size I want (150px), instead of full width.*/
+.header-image {
+	display: block;
+	height: 150px;
+	margin: 0 auto;
+	width: auto;
+}
+@media screen and (max-width: 690px) {
+    .header-image {
+        height: auto;
+    }
+}
+
+/* Increases line height of all list entries by 50% */
+li {
+	line-height: 150%;
+}
+
+/* Increases font of page/post title so it is larger than the <h2> font in the page content.*/
+h1.header-post-title-class {
+    font-size: 33px;
+}
+
+/* Decreases font of main menu so all items fit on one line */
+.main-navigation ul li a {
+	font-size:15px;
+}
+
+.tablepress-id-1 .row-1 .column-2 {
+	font-weight: bold;
+}
+.tablepress-id-1 .row-1 .column-3 {
+	font-weight: bold;
+}
+
+.tablepress-id-4 .column-1 {
+	width: 65%;
+}
+
+/* This ensures the username of the poster is not displayed on blog posts */
+.post .entry-meta span:first-child {
+    display: none;
+}
+
+/* This ensures the sidebar is displayed on the blog page. */
+.blog #secondary {
+    display: block!important;
+}
+
+/* This shrinks  the text on image captions. */
+.wp-caption-text {
+    font-size: 10px;
+}
+
+/* This sets a bg color on each featured image of the blog. */
+.post-featured-image {
+    background-color:whitesmoke;
+}
+
+/* This adds a margin to the top of each featured image of the blog. */
+.wp-post-image {
+    margin-top:18px;
+}
+
+/* This centers the titles on blog posts displayed by plugin Ultimate Post Title. */
+.upl-post-title {
+    text-align:center;
+}
+.upl-post-date {
+    text-align:center;
+}
+
+/* This ensures the date at the top of each post is right aligned. */
+.post-date-top {
+    text-align:right;
+}
+
+article .entry-content p img {
+    background-color:whitesmoke;
+}
+
+/* This ensures blog titles are in italics.*/
+#title-format {
+  font-style: italic;
+}
+
+/* This ensures the title of lists in the 'Ultimate Post List' plugin is same size as other titles.*/
+.upl-list > h3 > a {
+	font-size: 22px;
+}
+
+/* These ensure the Talks/Symposia tables are formatted properly.*/
+#tablepress-12 > tbody > tr > td.column-1 {
+  /*text-align: center;*/
+}
+#tablepress-12 > tbody > tr > td.column-2 {
+  /*text-align: center;*/
+}
+#tablepress-12 > tbody > tr > td.column-4 {
+  text-align: center;
+}
+#tablepress-13 > tbody > tr > td.column-4 {
+  text-align: center;
+}
+#tablepress-12 > thead > tr > th.column-4 {
+  text-align: center;
+}
+#tablepress-13 > thead > tr > th.column-4 {
+  text-align: center;
+}
+#tablepress-11 > tbody > tr > td {
+  text-align: center;
+  font-size: 120%;
+}
+#tablepress-11 > tbody > tr > td {
+  border-style:solid;
+  border-top-style:solid;
+  border-top-width:initial;
+}
+
+/* This code ensures the main menu is centered on page.*/
+#header-right-section {
+    float: none;
+}
+.main-navigation {
+    float: none;
+    text-align: center;
+}
+.main-navigation li {
+    float: none;
+    display: inline-block;
+}
+.main-navigation li:first-child {
+    padding-left: 0;
+}
+@media screen and (max-width: 1102px) {
+  .main-navigation li {
+      padding: 0 5px;
+  }
+  .main-navigation ul li a {
+      font-size: 12px;
+  }
+}
+@media screen and (max-width: 797px) {
+  .main-navigation li {
+      padding: 0 2px;
+  }
+  .main-navigation ul li a {
+      font-size: 11px;
+  }
+}
+
+
+
+/*This gives Talk/Symposia tables more space between entries.*/
+#tablepress-12 > tbody > tr > td {
+  padding-bottom: 30px;
+}
+#tablepress-13 > tbody > tr > td {
+  padding-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Begin News and Press table here.*/
+.outer-wrapper{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.box {
+  display: flex;
+  height: 100px;
+  width:100%;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.box-logo {
+  height: 100%;
+  display:flex;
+  align-items: center;
+  flex: 0 1 25%;
+  justify-content: center;
+}
+
+.logo-ma-print {
+  width:140px;
+  min-width:0;
+}
+
+.logo-ma-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width:0;
+  text-align: center;
+}
+
+.box-aw {
+  height: 150px;
+}
+
+.logo-ma {
+  width:100px;
+  min-width:0;
+}
+
+.logos-row-wrapper {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-header{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  width:75px;
+  line-height: 75px;
+  text-align: center;
+}
+
+.side-header-single{
+  margin-bottom:0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.logo-wrap {
+  width: 75%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animation for logos on 'News and Media' page.*/
+.wobble {
+  top: 0;
+  position: relative;
+  transition: top;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+.logo-wrap:hover .wobble {
+  animation: wobble 1.0s infinite ease-out;
+  top: -20px;
+}
+@keyframes wobble  {
+  0%    { transform:  rotate(-10deg); }
+  50%   { transform:  rotate(10deg); }
+  100%  { transform:  rotate(-10deg); }
+}
+
+/*Reduce font on text wobble elements so text does not wrap.*/
+@media screen and (max-width: 1150px) {
+  .logo-ma-text a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1045px) {
+  .logo-wrap {
+    width: 90%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/*Reduce font so text does not wrap.*/
+@media screen and (max-width: 900px) {
+  .logo-ma-text a {
+    font-size: 11px;
+  }
+}
+/*On smaller screens, change layout of 'News and Press' page to single column.*/
+@media screen and (max-width: 540px) {
+  .outer-wrapper{
+    display: inherit; 
+    align-items: inherit; 
+  }
+  .box {
+    height: inherit; 
+    justify-content: inherit; 
+    padding-bottom: inherit; 
+    flex-direction:column;
+  }
+  .box-logo {/*Ensure text wobble elements do not wrap to second line.*/
+    width:200px;
+  }
+  .box-tv {
+    height:inherit; 
+  }
+  /*Increase vertical margin between text wobble elements.*/
+  .logo-ma {
+    margin: 15px 0 15px 0;
+  }
+  .logo-ma-print {
+    margin: 20px 0 20px 0;
+  }
+  .logo-ma-text {
+    margin: 20px 0 20px 0;
+  }
+  .logos-row-wrapper {
+    width:inherit; 
+  }
+  .side-header{
+    writing-mode: inherit; 
+    text-orientation: inherit; 
+    width:inherit;
+    line-height: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .side-header-single{
+    margin-bottom:0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .logo-ma-text a {/*Reset font size on text wobble elements to initial size.*/
+    font-size: initial;
+  }
+}
+/*Fix 'News and Press' layout for IE mobile screens.*/
+@media screen and (max-width: 540px), screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .box-logo {
+    flex: inherit;
+  }
+}
+/* End News and Press CSS. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Ensures mouse pointer on Donate page changes accordingly.*/
+input[type=image]{
+    cursor: pointer;
+}
+
+/* This ensures thumbnails from Ultimate Post List plugin on home page are responsive.*/
+@media screen and (min-width: 880px) {
+  div.upl-list ul {
+    display: flex;
+    flex-direction: row;
+  }
+  div#content section.ultimate-post-list div.upl-list ul li {
+    margin: 0 5px;
+  }
+}
+
+/*Ensure line height on Benefit Dinner table matches the rest of the site.*/
+#tablepress-4 > tbody > tr > td {
+  line-height: 24px;
+}
+
+/* Ensure blog posts from guest contributors are italicized in home page slider. */
+.kt_ga {
+	font-style: italic;
+}
+
+/* Ensure current page is underlined in page outlines. */
+.kt-page-tree-nav .current_page_item > a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+

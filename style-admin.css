@@ -1,0 +1,11 @@
+/* Stylesheet governing styles on 'edit post' screen, specifically for 'Guest Contributor Name' custom meta box. */
+#kt-aut-name {
+  height: 0px;
+  opacity: 0;
+  transition: height 0.5s, opacity 0.25s;
+}
+
+#kt-aut-name.kt-show-mb {
+  height: 85px;
+  opacity: 1;
+}
