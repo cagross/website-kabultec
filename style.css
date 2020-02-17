@@ -171,7 +171,7 @@ article .entry-content p img {
 }
 
 /* This code ensures the main menu is centered on page.*/
-#header-right-section {
+/* #header-right-section {
     float: none;
 }
 .main-navigation {
@@ -200,7 +200,7 @@ article .entry-content p img {
   .main-navigation ul li a {
       font-size: 11px;
   }
-}
+} */
 
 
 
@@ -446,3 +446,34 @@ input[type=image]{
 
 
 
+
+
+
+
+/* Ensure main menu is left aligned. */
+#header-right-section {
+	float: left;
+  }
+  
+  #header-text-nav-container::after {
+	  /* content: 'testy';
+	  display: inline-block; */
+  }
+  
+  #responsive-menu-button::before {
+	  content: 'test';
+	  /* display: inline-block; */
+  }
+  
+  /* #masthead > a > img::after { */
+  #masthead > a::after {
+	  /* content: 'testy';
+	  display: inline-block;	 */
+  }
+  
+  #responsive-menu-button::before {
+	content: 'test';
+	position: absolute;
+	display: inline-block;
+	right: 100%;
+  }
