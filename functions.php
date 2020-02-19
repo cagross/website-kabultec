@@ -480,3 +480,4 @@ function kt_enqueue_script2() {
 	wp_enqueue_script( 'testy-js', '/wp-content/themes/spacious-child/assets/js/script-donate.js', array(), NULL, TRUE);
 }
 add_action( 'wp_enqueue_scripts', 'kt_enqueue_script2' );
+

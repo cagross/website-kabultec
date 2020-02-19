@@ -75,7 +75,7 @@ h1.header-post-title-class {
 
 /* Decreases font of main menu so all items fit on one line */
 .main-navigation ul li a {
-	font-size:15px;
+	font-size:14px;
 }
 
 .tablepress-id-1 .row-1 .column-2 {
@@ -461,7 +461,7 @@ input[type=image]{
   }
   
   #responsive-menu-button::before {
-	  content: 'test';
+	  /* content: 'test'; */
 	  /* display: inline-block; */
   }
   
@@ -476,4 +476,17 @@ input[type=image]{
 	position: absolute;
 	display: inline-block;
 	right: 100%;
+  }
+
+  #menu-item-243 {
+	  margin-left: 0;
+  }
+
+  #menu-main-menu {
+	  text-transform: uppercase;
+	  letter-spacing: 1.08px;
+  }
+
+  #menu-item-2410 {
+	  display: none;
   }
