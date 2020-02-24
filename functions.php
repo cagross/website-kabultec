@@ -107,7 +107,7 @@ add_action( 'init', 'remove_then_add_image_sizes', 12 );
 // This function enqueues the JS file that formats the home page slider and the JS file that adds links to widget titles.
 function kt_enqueue_script() {
 	if (is_front_page()) {
-		wp_enqueue_script( 'my-slider-js', '/wp-content/themes/spacious-child/assets/js/script-kt-slider.js', array(), NULL, TRUE);
+		// wp_enqueue_script( 'my-slider-js', '/wp-content/themes/spacious-child/assets/js/script-kt-slider.js', array(), NULL, TRUE);
 	}
 
 	//Enqueue the JS file to add links to widget titles, and pass to the JS file the base URL of the site (e.g. live site or dev site).
@@ -222,7 +222,7 @@ function themename_customize_register($wp_customize){
 		));
 	}
 }
-add_action('customize_register', 'themename_customize_register');
+// add_action('customize_register', 'themename_customize_register');
 
 // Defer Javascripts
 if (!(is_admin() )) {
