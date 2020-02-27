@@ -202,25 +202,6 @@ function spacious_featured_image_slider() {
 	<?php
 }
 
-/* Function to add a checkbox to each slide in Appearance-->Customize-->Slider.  Checking the box indicates that the slide features a blog post from a guest author.  This meta data is then used in spacious_featured_image_slider() to ensure the title is italicized. */
-function themename_customize_register($wp_customize){
-	$spacious_themename = "kt_spacious";
-		for ( $i = 1; $i <= 5; $i++ ) {
-	$wp_customize->add_setting($spacious_themename . "_slider_title_s_" . $i, array(
-        'capability'     => 'edit_theme_options',
-        'type'           => 'theme_mod',
-        ));
-        $wp_customize->add_control($spacious_themename . "_slider_title_control_" . $i, array(
-            'label'     =>	__('Slide features blog post from guest author', 'themename'),
-            'section'   => 	'spacious_slider_number_section' . $i,
-			'settings'	=>	$spacious_themename . "_slider_title_s_" . $i,
-			'type'		=>	'checkbox',
-			'priority'	=>	'5',
-		));
-	}
-}
-// add_action('customize_register', 'themename_customize_register');
-
 // Defer Javascripts
 if (!(is_admin() )) {
     function defer_parsing_of_js ( $url ) {
