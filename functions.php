@@ -107,6 +107,8 @@ add_action( 'init', 'remove_then_add_image_sizes', 12 );
 // This function enqueues the JS file that formats the home page slider and the JS file that adds links to widget titles.
 function kt_enqueue_script() {
 
+	wp_enqueue_script( 'test-js', '/wp-content/themes/spacious-child/assets/js/script-test.js', array(), NULL, TRUE);
+
 	//Enqueue the JS file to add links to widget titles, and pass to the JS file the base URL of the site (e.g. live site or dev site).
 	wp_enqueue_script( 'my-js', '/wp-content/themes/spacious-child/assets/js/script-post-titles.js', array(), NULL, TRUE);
 	//Ensure that the URL of the site in-question (e.g. live site URL or dev site URL) is passed to JavaScript.
