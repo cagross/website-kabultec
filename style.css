@@ -446,9 +446,14 @@ input[type=image]{
 
 
 
+/* Begin edits for main menu (desktop). */
 
 
+#menu-main-menu {
+	text-transform: uppercase;
+}
 
+@media screen and (min-width: 768px) {
 
 /* Ensure main menu is left aligned. */
 #header-right-section {
@@ -470,23 +475,22 @@ input[type=image]{
 	  /* content: 'testy';
 	  display: inline-block;	 */
   }
-  
+/*   
   #responsive-menu-button::before {
 	content: 'test';
 	position: absolute;
 	display: inline-block;
 	right: 100%;
-  }
+  } */
 
+ /* Ensure first menu items has no left margin. */ 
   #menu-item-243 {
 	  margin-left: 0;
   }
 
   #menu-main-menu {
-	  text-transform: uppercase;
+	  /* text-transform: uppercase; */
 	  letter-spacing: 1.08px;
   }
-
-  #menu-item-2410 {
-	  display: none;
-  }
+}
+  /* End edits for main menu (desktop). */
