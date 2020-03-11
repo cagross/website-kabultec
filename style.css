@@ -7,18 +7,13 @@
  Text Domain:  spacious
 */
 
-/* Shrinks font of main menu so it fits on smaller laptops */
-@media screen and (max-width: 1025px) {
- .main-navigation ul li a {font-size: 11px;}
- }
-
 /* Shrinks the width of the main contact form.  This id was obtained from a view source on contact form page.  */
 #wpcf7-f4-p72-o1
 {
     width:50%;
 }
 
-/* Shrinks settings of top 3 images so the fits on smaller laptops.*/
+/* Shrinks settings of top 3 images so they fit on smaller laptops.*/
 @media screen and (max-width: 1025px) {
   .tg-one-third {
     margin: 0 2;
@@ -34,33 +29,11 @@
 	line-height: 150%;
 }
 
- /* Shrinks size of the main menu so the fits on smaller laptops.*/
-@media screen and (max-width: 1367px) {
-	.main-navigation li {
-		font-size:14px;
-		padding-left: 12px;
-		padding-right: 12px;
-		color:red;
-  	}
-}
 
 /* Creates a new class with the same style as the theme widget <h3> titles.  I then apply this class via HTML in the text widget for "About The Founder: Nasrine Gross"  This is to allow the title to be a hyperlink. */
 .widget-title-border {
 	border-bottom: 2px solid #0FBE7C;
 	padding-bottom: 5px;
-}
-
-/*Ensures header image on home page is the size I want (150px), instead of full width.*/
-.header-image {
-	display: block;
-	height: 150px;
-	margin: 0 auto;
-	width: auto;
-}
-@media screen and (max-width: 690px) {
-    .header-image {
-        height: auto;
-    }
 }
 
 /* Increases line height of all list entries by 50% */
@@ -71,11 +44,6 @@ li {
 /* Increases font of page/post title so it is larger than the <h2> font in the page content.*/
 h1.header-post-title-class {
     font-size: 33px;
-}
-
-/* Decreases font of main menu so all items fit on one line */
-.main-navigation ul li a {
-	font-size:14px;
 }
 
 .tablepress-id-1 .row-1 .column-2 {
@@ -99,7 +67,7 @@ h1.header-post-title-class {
     display: block!important;
 }
 
-/* This shrinks  the text on image captions. */
+/* This shrinks the text on image captions. */
 .wp-caption-text {
     font-size: 10px;
 }
@@ -170,40 +138,6 @@ article .entry-content p img {
   border-top-width:initial;
 }
 
-/* This code ensures the main menu is centered on page.*/
-/* #header-right-section {
-    float: none;
-}
-.main-navigation {
-    float: none;
-    text-align: center;
-}
-.main-navigation li {
-    float: none;
-    display: inline-block;
-}
-.main-navigation li:first-child {
-    padding-left: 0;
-}
-@media screen and (max-width: 1102px) {
-  .main-navigation li {
-      padding: 0 5px;
-  }
-  .main-navigation ul li a {
-      font-size: 12px;
-  }
-}
-@media screen and (max-width: 797px) {
-  .main-navigation li {
-      padding: 0 2px;
-  }
-  .main-navigation ul li a {
-      font-size: 11px;
-  }
-} */
-
-
-
 /*This gives Talk/Symposia tables more space between entries.*/
 #tablepress-12 > tbody > tr > td {
   padding-bottom: 30px;
@@ -211,17 +145,6 @@ article .entry-content p img {
 #tablepress-13 > tbody > tr > td {
   padding-bottom: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Begin News and Press table here.*/
 .outer-wrapper{
@@ -392,26 +315,6 @@ article .entry-content p img {
 }
 /* End News and Press CSS. */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Ensures mouse pointer on Donate page changes accordingly.*/
 input[type=image]{
     cursor: pointer;
@@ -446,51 +349,75 @@ input[type=image]{
 
 
 
-/* Begin edits for main menu (desktop). */
+
+
+
+
+
+/* Begin header edits. */
 
 
 #menu-main-menu {
 	text-transform: uppercase;
 }
 
+
 @media screen and (min-width: 768px) {
 
-/* Ensure main menu is left aligned. */
+  /*Ensures header image on home page is the size I want (150px), instead of full width.*/
+  .header-image {
+    display: block;
+    height: 150px;
+    margin: 0 auto;
+    width: auto;
+  }
+  /* Ensure main menu is left aligned. */
 #header-right-section {
 	float: left;
   }
-  
-  #header-text-nav-container::after {
-	  /* content: 'testy';
-	  display: inline-block; */
-  }
-  
-  #responsive-menu-button::before {
-	  /* content: 'test'; */
-	  /* display: inline-block; */
-  }
-  
-  /* #masthead > a > img::after { */
-  #masthead > a::after {
-	  /* content: 'testy';
-	  display: inline-block;	 */
-  }
-/*   
-  #responsive-menu-button::before {
-	content: 'test';
-	position: absolute;
-	display: inline-block;
-	right: 100%;
-  } */
 
  /* Ensure first menu items has no left margin. */ 
   #menu-item-243 {
 	  margin-left: 0;
   }
-
   #menu-main-menu {
-	  /* text-transform: uppercase; */
 	  letter-spacing: 1.08px;
   }
 }
-  /* End edits for main menu (desktop). */
+
+
+
+
+
+/* Begin legacy header edits. */
+/* Shrinks font of main menu so it fits on smaller laptops */
+@media screen and (max-width: 1025px) {
+  /* .main-navigation ul li a {font-size: 11px;} */
+}
+
+/* Shrinks size of the main menu so the fits on smaller laptops.*/
+@media screen and (max-width: 1367px) {
+	.main-navigation li {
+		/* font-size:14px;
+		padding-left: 12px;
+		padding-right: 12px;
+		color:red; */
+  }
+}
+
+@media screen and (max-width: 690px) {
+    .header-image {
+        /* height: auto; */
+    }
+}
+/* Decreases font of main menu so all items fit on one line */
+.main-navigation ul li a {
+	/* font-size:14px; */
+}
+
+
+/* End legacy header edits. */
+
+
+
+  /* Begin header edits. */
