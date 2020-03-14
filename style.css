@@ -371,18 +371,24 @@ input[type=image]{
     margin: 0 auto;
     width: auto;
   }
-  /* Ensure main menu is left aligned. */
-#header-right-section {
-	float: left;
-  }
 
- /* Ensure first menu items has no left margin. */ 
-  #menu-item-243 {
-	  margin-left: 0;
-  }
-  #menu-main-menu {
-	  letter-spacing: 1.08px;
-  }
+/* Ensure main menu is left aligned. */
+	#header-right-section {
+		float: left;
+	}
+
+	/* .main-navigation li {
+		margin-left: 30px;
+	} */
+	/* Ensure first menu items has no left margin. */ 
+	#menu-item-243 {
+		margin-left: 0;
+	}
+	#menu-main-menu {
+		letter-spacing: 1.08px;
+	}
+
+
 }
 
 
