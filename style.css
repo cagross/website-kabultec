@@ -362,6 +362,9 @@ input[type=image]{
 }
 
 
+/* Begin header edits applying only to desktop screen widths. */
+
+
 @media screen and (min-width: 768px) {
 
   /*Ensures header image on home page is the size I want (150px), instead of full width.*/
@@ -391,39 +394,6 @@ input[type=image]{
 
 }
 
+/* End header edits applying only to desktop screen widths. */
 
-
-
-
-/* Begin legacy header edits. */
-/* Shrinks font of main menu so it fits on smaller laptops */
-@media screen and (max-width: 1025px) {
-  /* .main-navigation ul li a {font-size: 11px;} */
-}
-
-/* Shrinks size of the main menu so the fits on smaller laptops.*/
-@media screen and (max-width: 1367px) {
-	.main-navigation li {
-		/* font-size:14px;
-		padding-left: 12px;
-		padding-right: 12px;
-		color:red; */
-  }
-}
-
-@media screen and (max-width: 690px) {
-    .header-image {
-        /* height: auto; */
-    }
-}
-/* Decreases font of main menu so all items fit on one line */
-.main-navigation ul li a {
-	/* font-size:14px; */
-}
-
-
-/* End legacy header edits. */
-
-
-
-  /* Begin header edits. */
+/* Begin header edits. */
