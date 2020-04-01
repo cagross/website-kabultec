@@ -356,16 +356,44 @@ input[type=image]{
 
 /* Begin header edits. */
 
+/* Begin mobile header edits.*/
+/* Ensure logo, donate button, and nav menu are on the same line, and home page slider is on the line below it. */
+#masthead {
+	display: flex;
+	flex-wrap: wrap;
+}
+#featured-slider {
+	flex-basis: 100%;
+}
 
+/* Ensure donate button appears before nav menu. */
 #menu-main-menu {
 	text-transform: uppercase;
 }
+#site-navigation {
+	display: flex;
+	flex-direction: row-reverse;
+}
+/* End mobile header edits.*/
 
 
 /* Begin header edits applying only to desktop screen widths. */
 
 
+
+
+
 @media screen and (min-width: 768px) {
+
+
+	/* Remove mobile edits to logo, donate button, nav menu, and slider.*/
+	#masthead {
+		display: initial;
+		flex-wrap: initial;
+	}
+	#featured-slider {
+		flex-basis: initial;
+	}
 
   /*Ensures header image on home page is the size I want (150px), instead of full width.*/
   .header-image {
@@ -392,7 +420,7 @@ input[type=image]{
 
 
 /* Add these to use flex to push last menu item to the far right.*/
-	/* #header-right-section {
+	#header-right-section {
 		float: none;
 	}
 	.main-navigation {
@@ -404,14 +432,13 @@ input[type=image]{
 		display: inline-block;
 	}
 
-	#menu-main-menu {
-		display: flex:
+	#site-navigation {
+		flex-direction: row;
 	}
-	#menu-item-73 {
+	.testclass {
 		margin-left: auto;
 	}
 	
-	*/
 }
 
 /* End header edits applying only to desktop screen widths. */
