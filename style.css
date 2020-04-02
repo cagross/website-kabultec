@@ -361,9 +361,14 @@ input[type=image]{
 #masthead {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 #featured-slider {
 	flex-basis: 100%;
+}
+/* Ensure logo resizes to fill extra space on the line. */
+#masthead > a {
+	flex: 1 1 0;
 }
 
 /* Ensure donate button appears before nav menu. */
@@ -378,11 +383,6 @@ input[type=image]{
 
 
 /* Begin header edits applying only to desktop screen widths. */
-
-
-
-
-
 @media screen and (min-width: 768px) {
 
 
@@ -390,9 +390,13 @@ input[type=image]{
 	#masthead {
 		display: initial;
 		flex-wrap: initial;
+		justify-content: initial;
 	}
 	#featured-slider {
 		flex-basis: initial;
+	}
+	#masthead > a {
+		flex: initial;
 	}
 
   /*Ensures header image on home page is the size I want (150px), instead of full width.*/
