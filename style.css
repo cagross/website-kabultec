@@ -357,6 +357,15 @@ input[type=image]{
 /* Begin header edits. */
 
 /* Begin mobile header edits.*/
+
+
+/* Ensure menu font is identical to design. */
+#menu-main-menu li > a {
+	font-size: 14px;
+	letter-spacing: 1.5px;
+}
+
+
 /* Ensure logo, donate button, and nav menu are on the same line, and home page slider is on the line below it. */
 #masthead {
 	display: flex;
