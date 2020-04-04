@@ -356,13 +356,28 @@ input[type=image]{
 
 /* Begin header edits. */
 
+
+
+
 /* Begin mobile header edits.*/
+/* Style the donate button. */
+.kt-don-but {
+	background-color: #AD2E36;
+	text-transform: uppercase;
+	border-radius: 30px;
+	font-size: 15px;
+	font-weight: 900;
+	letter-spacing: 3px;
+	height: 45px;
+	/* line-height: 45px; */
+	width: 220px;
 
-
+}
 /* Ensure menu font is identical to design. */
 #menu-main-menu li > a {
-	font-size: 14px;
+	font-size: 15px;
 	letter-spacing: 1.5px;
+	/* line-height: 45px; */
 }
 
 
@@ -371,6 +386,7 @@ input[type=image]{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 }
 #featured-slider {
 	flex-basis: 100%;
@@ -448,7 +464,7 @@ input[type=image]{
 	#site-navigation {
 		flex-direction: row;
 	}
-	.testclass {
+	.kt-don-but {
 		margin-left: auto;
 	}
 	

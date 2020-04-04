@@ -461,12 +461,13 @@ function kt_enqueue_script2() {
 }
 add_action( 'wp_enqueue_scripts', 'kt_enqueue_script2' );
 
+// Insert donate button into main menu.
 function test_function($nav_menu) {
 
-	error_log( print_r( 'test123', true ) );
-	error_log( print_r( $nav_menu, true ) );
+	// error_log( print_r( 'test123', true ) );
+	// error_log( print_r( $nav_menu, true ) );
 	// error_log( print_r( $testy, true ) );
-	return $nav_menu . '<button class="testclass">Donate Now</button>';
+	return $nav_menu . '<button class="kt-don-but">Donate Now</button>';
 }
 // add_filter('init', 'test_function');
 add_filter( 'wp_nav_menu', 'test_function');
