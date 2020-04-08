@@ -415,6 +415,22 @@ input[type=image]{
 @media screen and (min-width: 768px) {
 
 
+	/* Ensure no wrapping of main menu occurs. */
+	#menu-main-menu {
+		display: flex;
+	}
+	.menu-primary-container {
+		margin-right: 10px;
+	}
+	#menu-main-menu > li > a {
+		white-space: nowrap;
+	}
+
+
+
+
+
+
 	/* Remove mobile edits to logo, donate button, nav menu, and slider.*/
 	#masthead {
 		display: initial;
