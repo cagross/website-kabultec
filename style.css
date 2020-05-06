@@ -365,7 +365,8 @@ input[type=image]{
 	background-color: #AD2E36;
 	text-transform: uppercase;
 	border-radius: 30px;
-	font-size: 15px;
+	/* font-size: 15px; */
+	
 	font-weight: 900;
 	letter-spacing: 3px;
 	height: 45px;
@@ -375,11 +376,28 @@ input[type=image]{
 	flex: 0 1 auto;
 
 }
-/* Ensure menu font is identical to design. */
+/* Ensure menu font is identical to design, and scales linearly at lower screen widths, so everything fits inside its container. */
 #menu-main-menu li > a {
-	font-size: 15px;
 	letter-spacing: 1.5px;
-	/* line-height: 45px; */
+}
+@media screen and (min-width: 768px) {
+	/* Font size scales linearly with screen width, from 15px (@900px width) to 12.5px (768px width)*/
+	#menu-main-menu li > a, .kt-don-but {
+		font-size: calc((1vw / .528) - 2.0454545px);
+	}
+	/* Left/right padding scales linearly with screen width, from 25px (@900px width) to 5px (768px width)*/
+	.kt-don-but {
+		padding-left: calc((1vw / .066) - 111.363636px);
+		padding-right: calc((1vw / .066) - 111.363636px);
+	}
+}
+@media screen and (min-width: 900px) {
+	#menu-main-menu li > a, .kt-don-but {
+		font-size: 15px;
+	}
+	.kt-don-but {
+		padding: initial;
+	}
 }
 
 
@@ -412,7 +430,6 @@ input[type=image]{
 	padding-top: 0;
 }
 /* End mobile header edits.*/
-
 
 
 
