@@ -383,6 +383,9 @@ input[type=image]{
 }
 
 
+
+
+
 /* Ensure logo, donate button, and nav menu are on the same line, and home page slider is on the line below it. */
 #masthead {
 	display: flex;
@@ -409,6 +412,18 @@ input[type=image]{
 	padding-top: 0;
 }
 /* End mobile header edits.*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Begin header edits applying only to desktop screen widths. */
