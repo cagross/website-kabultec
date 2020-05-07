@@ -463,16 +463,6 @@ add_action( 'wp_enqueue_scripts', 'kt_enqueue_script2' );
 
 // Insert donate button into main menu.
 function test_function($nav_menu) {
-
-	// error_log( print_r( 'test123', true ) );
-	// error_log( print_r( $nav_menu, true ) );
-	// error_log( print_r( $testy, true ) );
-	return $nav_menu . '<button class="kt-don-but">Donate Now</button>';
+	return $nav_menu . '<a href="/donate" class="kt-don-menu"><button class="kt-don-but">Donate Now</button></a>';
 }
-// add_filter('init', 'test_function');
 add_filter( 'wp_nav_menu', 'test_function');
-// $testy = apply_filters( 'wp_nav_menu', string $nav_menu, stdClass $args );
-// $testy = apply_filters( 'wp_nav_menu', $nav_menu );
-
-
-// $emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );

@@ -366,14 +366,13 @@ input[type=image]{
 	text-transform: uppercase;
 	border-radius: 30px;
 	/* font-size: 15px; */
-	
 	font-weight: 900;
 	letter-spacing: 3px;
 	height: 45px;
-	/* line-height: 45px; */
-	width: 220px;
 	margin-bottom: 0;
-	flex: 0 1 auto;
+	/* width: 220px;
+	flex: 0 1 auto; */
+	width: 100%;
 
 }
 /* Ensure menu font is identical to design, and scales linearly at lower screen widths, so everything fits inside its container. */
@@ -516,8 +515,11 @@ input[type=image]{
 	#site-navigation {
 		flex-direction: row;
 	}
-	.kt-don-but {
+	.kt-don-menu {
+	/* .kt-don-but { */
 		margin-left: auto;
+		width: 220px;
+		flex: 0 1 auto;
 	}
 	
 }
