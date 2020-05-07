@@ -438,7 +438,19 @@ input[type=image]{
 
 
 
-
+@media screen and (max-width: 767px) {
+	.header-image {
+		border: none;
+	}
+	/* Ensure that at screen width 600 px, the header doesn't automatically obtain extra top padding/margin. */
+	#header-left-section {
+		display: none;
+	}
+	/* Ensure opening hamburger menu does not add padding to header elements. */
+	.main-small-navigation a.kt-don-menu {
+		padding: 0;
+	}
+}
 
 
 
