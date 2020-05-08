@@ -375,6 +375,11 @@ input[type=image]{
 	width: 100%;
 
 }
+
+/* Hide full text on donate button at mobile screen widths.*/
+.kt-full-text { display: none; }
+
+
 /* Ensure menu font is identical to design, and scales linearly at lower screen widths, so everything fits inside its container. */
 #menu-main-menu li > a {
 	letter-spacing: 1.5px;
@@ -389,6 +394,10 @@ input[type=image]{
 		padding-left: calc((1vw / .066) - 111.363636px);
 		padding-right: calc((1vw / .066) - 111.363636px);
 	}
+	/* At larger screen widths, hide short text and show full text */
+	.kt-full-text { display: inline-block; }
+	.kt-short-text { display: none; }
+
 }
 @media screen and (min-width: 900px) {
 	#menu-main-menu li > a, .kt-don-but {
@@ -433,10 +442,9 @@ input[type=image]{
 
 
 
-
-
-
-
+:root {
+	--head-mob-lr-margin: 3vw;
+}
 
 @media screen and (max-width: 767px) {
 	.header-image {
@@ -450,6 +458,38 @@ input[type=image]{
 	.main-small-navigation a.kt-don-menu {
 		padding: 0;
 	}
+	.better-responsive-menu #header-text-nav-container {
+		/* margin-top: 0; */
+		margin-bottom: 0;
+
+	}
+	.inner-wrap {
+		width: 100%;
+	}
+	.better-responsive-menu #header-right-section {
+		padding: 0;
+		margin: 0;
+	}
+	.better-responsive-menu #site-navigation {
+		margin-top: 0;
+	}
+
+
+	#masthead > a {
+		margin-left: var(--head-mob-lr-margin);
+		margin-right: 6vw;
+	}
+	#header-text-nav-container {
+		margin-right:  var(--head-mob-lr-margin);
+	}
+	.kt-don-menu {
+		margin-right: 2vw;
+	}
+	/* Set font-size of hamburger menu. */
+	.better-responsive-menu .site-header .menu-toggle::before {
+		font-size: calc(100*75vw / 767);
+	}
+
 }
 
 
