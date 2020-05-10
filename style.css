@@ -417,7 +417,7 @@ input[type=image]{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-end;
 }
 #featured-slider {
 	flex-basis: 100%;
@@ -487,7 +487,12 @@ input[type=image]{
 	}
 	/* Set font-size of hamburger menu. */
 	.better-responsive-menu .site-header .menu-toggle::before {
-		font-size: calc(100*75vw / 767);
+		/* font-size: calc(100*75vw / 767); */
+		font-size: 75px;
+	}
+	.better-responsive-menu .site-header .menu-toggle {
+		color: #000;
+		background-color: #fff;
 	}
 
 }
