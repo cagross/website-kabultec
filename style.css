@@ -444,6 +444,7 @@ input[type=image]{
 
 :root {
 	--head-mob-lr-margin: 3vw;
+	--head-pad-top: 3.911vw;
 }
 
 @media screen and (max-width: 767px) {
@@ -495,6 +496,14 @@ input[type=image]{
 		background-color: #fff;
 	}
 
+	/* Set top padding to be 30 px @ screen width 767 px. */
+	#masthead {
+		padding-top: var(--head-pad-top);
+	}
+	/* Set bottom padding to be 5/3 of top padding. */
+	#masthead > a, #header-text-nav-container {
+		padding-bottom: calc(5*var(--head-pad-top) / 3);
+	}
 }
 
 
