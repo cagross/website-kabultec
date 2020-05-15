@@ -504,6 +504,16 @@ input[type=image]{
 	#masthead > a, #header-text-nav-container {
 		padding-bottom: calc(5*var(--head-pad-top) / 3);
 	}
+	.kt-don-but {
+		/* Height is 60 px @ screen width 767 px. */
+		height: calc(60vw / 7.67);
+		/* Font size is 20 px @ screen width 767 px. */
+		font-size: calc(20vw / 7.67);
+		
+		letter-spacing: 5px;
+		border-radius: 50px;
+	}
+
 }
 
 
