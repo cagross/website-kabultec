@@ -452,6 +452,9 @@ input[type=image]{
 		font-size: 10px;
 		letter-spacing: 3px;
 	}
+	.better-responsive-menu .site-header .menu-toggle::before {
+		font-size: 75px;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -494,10 +497,9 @@ input[type=image]{
 		margin-right: 2vw;
 	}
 	/* Set font-size of hamburger menu. */
-	.better-responsive-menu .site-header .menu-toggle::before {
-		/* font-size: calc(100*75vw / 767); */
+	/* .better-responsive-menu .site-header .menu-toggle::before {
 		font-size: 75px;
-	}
+	} */
 	.better-responsive-menu .site-header .menu-toggle {
 		color: #000;
 		background-color: #fff;
@@ -523,11 +525,25 @@ input[type=image]{
 
 }
 
+@media screen and (min-width: 300px) {
+	.better-responsive-menu .site-header .menu-toggle {
+		/* Width of menu container is 80 px @ screen width 767 px and 40 px @ screen width 300 px and below. */
+		width: calc(4000vw / 467 + (80px - ((767px * 40) / 467)));
+	}
+	.better-responsive-menu .site-header .menu-toggle::before {
+		font-size: calc(6500vw / 467 + (140px - ((767px * 65) / 467)));
+	}
 
+}
 
 /* Begin header edits applying only to desktop screen widths. */
 @media screen and (min-width: 768px) {
-
+	.better-responsive-menu .site-header .menu-toggle {
+		width: initial;
+	}
+	.better-responsive-menu .site-header .menu-toggle::before {
+		font-size: initial;
+	}
 
 	/* Ensure no wrapping of main menu occurs. */
 	#menu-main-menu {
