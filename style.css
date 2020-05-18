@@ -515,15 +515,19 @@ input[type=image]{
 		padding-bottom: calc(5*var(--head-pad-top) / 3);
 	}
 	.kt-don-but {
-		/* Height is 60 px @ screen width 767 px. */
-    /* height: calc(60vw / 7.67); */
+		/* Height is 60 px @ screen width 767 px and 25px @ 300 px and below. */
     height: calc(4500vw / 467 + (70px - ((767px * 45) / 467) ));
 		/* Font size is 20 px @ screen width 767 px and 10 px @ screen width 300 px and below. */
 		font-size: calc(100vw / 46.7 + (20px - (767px / 46.7) ));
 		/* Letter spacing is 5 px @ screen width 767 px and 3 px @ screen width 300 px and below. */
 		letter-spacing: calc(200vw / 467 + (5px - ((767px * 2) / 467) ));
 		border-radius: 50px;
-	}
+  }
+  /* Ensure mobile menu is wide enough.*/
+  .better-responsive-menu #site-navigation .menu-primary-container {
+    width: 150%;
+    left: -50%;
+  }
 
 }
 

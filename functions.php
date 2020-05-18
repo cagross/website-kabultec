@@ -284,7 +284,6 @@ function bodhi_dequeue_svgs_css() {
 	wp_dequeue_style( 'bodhi-svgs-attachment' );// Stylesheet for the SVG Support plugin.  This is not necessary if I am simply loading SVG files as images (as I am doing on the site)
 	if (is_front_page()) {
 		wp_dequeue_style( 'magic-liquidizer-table-style' );// Stylesheet for the Magic Liquidizer plugin.  This plugin is not in-use on the home page.
-		wp_dequeue_style( 'spacious-font-awesome' );// Stylesheet for Font Awesome, loaded by the theme. This plugin is not in-use on the home page.
 		wp_dequeue_style( 'msl-main' );// Stylesheet for the Master Slider plugin.  This plugin is not in-use on the home page.
 		wp_dequeue_style( 'msl-custom' );// Stylesheet for the Master Slider plugin.  This plugin is not in-use on the home page.
 		wp_dequeue_style( 'widgetopts-styles' );// Stylesheet for the Widget Options plugin.  This plugin is not in-use on the home page.
