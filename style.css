@@ -368,7 +368,7 @@ input[type=image]{
 	/* font-size: 15px; */
 	font-weight: 900;
 	letter-spacing: 3px;
-	height: 45px;
+	/* height: 45px; */
 	margin-bottom: 0;
 	/* width: 220px;
 	flex: 0 1 auto; */
@@ -450,7 +450,8 @@ input[type=image]{
 @media screen and (max-width: 300px) {
 	.kt-don-but {
 		font-size: 10px;
-		letter-spacing: 3px;
+    letter-spacing: 3px;
+    height: 25px;
 	}
 	.better-responsive-menu .site-header .menu-toggle::before {
 		font-size: 75px;
@@ -515,7 +516,8 @@ input[type=image]{
 	}
 	.kt-don-but {
 		/* Height is 60 px @ screen width 767 px. */
-		height: calc(60vw / 7.67);
+    /* height: calc(60vw / 7.67); */
+    height: calc(4500vw / 467 + (70px - ((767px * 45) / 467) ));
 		/* Font size is 20 px @ screen width 767 px and 10 px @ screen width 300 px and below. */
 		font-size: calc(100vw / 46.7 + (20px - (767px / 46.7) ));
 		/* Letter spacing is 5 px @ screen width 767 px and 3 px @ screen width 300 px and below. */
@@ -614,7 +616,10 @@ input[type=image]{
 	#site-navigation {
 		flex-direction: row;
 	}
-	.kt-don-menu {
+  .kt-don-but {
+  	height: 45px;
+  }
+  .kt-don-menu {
 	/* .kt-don-but { */
 		margin-left: auto;
 		width: 220px;
