@@ -373,7 +373,10 @@ input[type=image]{
 	/* width: 220px;
 	flex: 0 1 auto; */
 	width: 100%;
+}
 
+#menu-main-menu > li {
+  line-height: 200%;
 }
 
 /* Hide full text on donate button at mobile screen widths.*/
@@ -381,12 +384,19 @@ input[type=image]{
 
 
 /* Ensure menu font is identical to design, and scales linearly at lower screen widths, so everything fits inside its container. */
-#menu-main-menu li > a {
+#menu-main-menu > li > a {
 	letter-spacing: 1.5px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 301px) {
+  #menu-main-menu > li {
+    line-height: calc((28px + ((767px * 4) / 467) - (400vw / 467)));
+  }
+}
+
+
+@media screen and (min-width: 769px) {
 	/* Font size scales linearly with screen width, from 15px (@900px width) to 12.5px (768px width)*/
-	#menu-main-menu li > a, .kt-don-but {
+	#menu-main-menu > li > a, .kt-don-but {
 		font-size: calc((1vw / .528) - 2.0454545px);
 	}
 	/* Left/right padding scales linearly with screen width, from 25px (@900px width) to 5px (768px width)*/
@@ -396,7 +406,11 @@ input[type=image]{
 	}
 	/* At larger screen widths, hide short text and show full text */
 	.kt-full-text { display: inline-block; }
-	.kt-short-text { display: none; }
+  .kt-short-text { display: none; }
+  #menu-main-menu > li {
+    line-height: inherit;
+  }
+
 
 }
 @media screen and (min-width: 900px) {
@@ -442,6 +456,7 @@ input[type=image]{
 
 
 
+
 :root {
 	--head-mob-lr-margin: 3vw;
 	--head-pad-top: 3.911vw;
@@ -455,10 +470,10 @@ input[type=image]{
 	}
 	.better-responsive-menu .site-header .menu-toggle::before {
 		font-size: 75px;
-	}
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	.header-image {
 		border: none;
 	}
@@ -543,7 +558,7 @@ input[type=image]{
 }
 
 /* Begin header edits applying only to desktop screen widths. */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 	.better-responsive-menu .site-header .menu-toggle {
 		width: initial;
 	}
