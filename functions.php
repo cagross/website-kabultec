@@ -461,9 +461,20 @@ function kt_enqueue_script2() {
 add_action( 'wp_enqueue_scripts', 'kt_enqueue_script2' );
 
 // Insert donate button into main menu.
-function test_function($nav_menu) {
-	// return $nav_menu . '<a href="/donate" class="kt-don-menu"><button class="kt-don-but">Donate Now</button></a>';
-	return $nav_menu . '<a href="/donate" class="kt-don-menu"><button class="kt-don-but"><span class="kt-full-text">Donate Now</span><span class="kt-short-text">Donate</span></button></a>';
+function kt_menu_button($nav_menu) {
 
+  $kt_but_markup = '
+    <a href="/donate" class="kt-don-menu">
+      <button class="kt-don-but">
+        <span class="kt-full-text">
+          Donate Now
+        </span>
+        <span class="kt-short-text">
+          Donate
+        </span>
+      </button>
+    </a>
+  ';
+  return $nav_menu . $kt_but_markup;
 }
-add_filter( 'wp_nav_menu', 'test_function');
+add_filter( 'wp_nav_menu', 'kt_menu_button');

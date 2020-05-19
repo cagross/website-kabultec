@@ -355,24 +355,24 @@ input[type=image]{
 
 
 /* Begin header edits. */
-
-
-
+:root {
+	--head-mob-lr-margin: 3vw;
+	--head-pad-top: 3.911vw;
+}
 
 /* Begin mobile header edits.*/
+
 /* Style the donate button. */
 .kt-don-but {
 	background-color: #AD2E36;
 	text-transform: uppercase;
 	border-radius: 30px;
-	/* font-size: 15px; */
 	font-weight: 900;
 	letter-spacing: 3px;
-	/* height: 45px; */
 	margin-bottom: 0;
-	/* width: 220px;
-	flex: 0 1 auto; */
-	width: 100%;
+  width: 100%;
+  font-size: 10px;
+  height: 25px;
 }
 
 #menu-main-menu > li {
@@ -382,49 +382,10 @@ input[type=image]{
 /* Hide full text on donate button at mobile screen widths.*/
 .kt-full-text { display: none; }
 
-
 /* Ensure menu font is identical to design, and scales linearly at lower screen widths, so everything fits inside its container. */
 #menu-main-menu > li > a {
 	letter-spacing: 1.5px;
 }
-@media screen and (min-width: 301px) {
-  #menu-main-menu > li {
-    line-height: calc((28px + ((767px * 4) / 467) - (400vw / 467)));
-  }
-}
-
-
-@media screen and (min-width: 769px) {
-	/* Font size scales linearly with screen width, from 15px (@900px width) to 12.5px (768px width)*/
-	#menu-main-menu > li > a, .kt-don-but {
-		font-size: calc((1vw / .528) - 2.0454545px);
-	}
-	/* Left/right padding scales linearly with screen width, from 25px (@900px width) to 5px (768px width)*/
-	.kt-don-but {
-		padding-left: calc((1vw / .066) - 111.363636px);
-		padding-right: calc((1vw / .066) - 111.363636px);
-	}
-	/* At larger screen widths, hide short text and show full text */
-	.kt-full-text { display: inline-block; }
-  .kt-short-text { display: none; }
-  #menu-main-menu > li {
-    line-height: inherit;
-  }
-
-
-}
-@media screen and (min-width: 900px) {
-	#menu-main-menu li > a, .kt-don-but {
-		font-size: 15px;
-	}
-	.kt-don-but {
-		padding: initial;
-	}
-}
-
-
-
-
 
 /* Ensure logo, donate button, and nav menu are on the same line, and home page slider is on the line below it. */
 #masthead {
@@ -440,7 +401,6 @@ input[type=image]{
 #masthead > a {
 	flex: 1 1 0;
 }
-
 /* Ensure donate button appears before nav menu. */
 #menu-main-menu {
 	text-transform: uppercase;
@@ -451,115 +411,49 @@ input[type=image]{
 	align-items: center;
 	padding-top: 0;
 }
-/* End mobile header edits.*/
-
-
-
-
-
-:root {
-	--head-mob-lr-margin: 3vw;
-	--head-pad-top: 3.911vw;
+.better-responsive-menu .site-header .menu-toggle::before {
+  font-size: 75px;
 }
 
-@media screen and (max-width: 300px) {
-	.kt-don-but {
-		font-size: 10px;
-    letter-spacing: 3px;
-    height: 25px;
-	}
-	.better-responsive-menu .site-header .menu-toggle::before {
-		font-size: 75px;
+@media screen and (min-width: 301px) {
+  #menu-main-menu > li {
+    line-height: calc((28px + ((767px * 4) / 467) - (400vw / 467)));
   }
-}
-
-@media screen and (max-width: 768px) {
-	.header-image {
-		border: none;
-	}
-	/* Ensure that at screen width 600 px, the header doesn't automatically obtain extra top padding/margin. */
-	#header-left-section {
-		display: none;
-	}
-	/* Ensure opening hamburger menu does not add padding to header elements. */
-	.main-small-navigation a.kt-don-menu {
-		padding: 0;
-	}
-	.better-responsive-menu #header-text-nav-container {
-		/* margin-top: 0; */
-		margin-bottom: 0;
-
-	}
-	.inner-wrap {
-		width: 100%;
-	}
-	.better-responsive-menu #header-right-section {
-		padding: 0;
-		margin: 0;
-	}
-	.better-responsive-menu #site-navigation {
-		margin-top: 0;
-	}
-
-	#masthead > a {
-		margin-left: var(--head-mob-lr-margin);
-		margin-right: 6vw;
-	}
-	#header-text-nav-container {
-		margin-right:  var(--head-mob-lr-margin);
-		top: calc(-500vw / 467 + ((767px * 5) / 467) );
-	}
-	.kt-don-menu {
-		margin-right: 2vw;
-	}
-	/* Set font-size of hamburger menu. */
-	/* .better-responsive-menu .site-header .menu-toggle::before {
-		font-size: 75px;
-	} */
-	.better-responsive-menu .site-header .menu-toggle {
-		color: #000;
-		background-color: #fff;
-	}
-
-	/* Set top padding to be 30 px @ screen width 767 px. */
-	#masthead {
-		padding-top: var(--head-pad-top);
-	}
-	/* Set bottom padding to be 5/3 of top padding. */
-	#masthead > a, #header-text-nav-container {
-		padding-bottom: calc(5*var(--head-pad-top) / 3);
-	}
-	.kt-don-but {
-		/* Height is 60 px @ screen width 767 px and 25px @ 300 px and below. */
-    height: calc(4500vw / 467 + (70px - ((767px * 45) / 467) ));
-		/* Font size is 20 px @ screen width 767 px and 10 px @ screen width 300 px and below. */
-		font-size: calc(100vw / 46.7 + (20px - (767px / 46.7) ));
-		/* Letter spacing is 5 px @ screen width 767 px and 3 px @ screen width 300 px and below. */
-		letter-spacing: calc(200vw / 467 + (5px - ((767px * 2) / 467) ));
-		border-radius: 50px;
-  }
-  /* Ensure mobile menu is wide enough.*/
-  .better-responsive-menu #site-navigation .menu-primary-container {
-    width: 150%;
-    left: -50%;
-  }
-
-}
-
-@media screen and (min-width: 300px) {
-	.better-responsive-menu .site-header .menu-toggle {
+  .better-responsive-menu .site-header .menu-toggle {
 		/* Width of menu container is 80 px @ screen width 767 px and 40 px @ screen width 300 px and below. */
 		width: calc(4000vw / 467 + (80px - ((767px * 40) / 467)));
 	}
 	.better-responsive-menu .site-header .menu-toggle::before {
 		font-size: calc(6500vw / 467 + (140px - ((767px * 65) / 467)));
-	}
-
+  }
+  .kt-don-but {
+    /* Font size is 20 px @ screen width 767 px and 10 px @ screen width 300 px and below. */
+    font-size: calc(100vw / 46.7 + (20px - (767px / 46.7) ));
+    /* Letter spacing is 5 px @ screen width 767 px and 3 px @ screen width 300 px and below. */
+    letter-spacing: calc(200vw / 467 + (5px - ((767px * 2) / 467) ));
+    /* Height is 60 px @ screen width 767 px and 25px @ 300 px and below. */
+    height: calc(4500vw / 467 + (70px - ((767px * 45) / 467) ));
+  }
 }
 
-/* Begin header edits applying only to desktop screen widths. */
 @media screen and (min-width: 769px) {
-	.better-responsive-menu .site-header .menu-toggle {
+	/* Font size scales linearly with screen width, from 15px (@900px width) to 12.5px (768px width)*/
+	#menu-main-menu > li > a, .kt-don-but {
+		font-size: calc((1vw / .528) - 2.0454545px);
+	}
+	/* Left/right padding scales linearly with screen width, from 25px (@900px width) to 5px (768px width)*/
+	.kt-don-but {
+		padding-left: calc((1vw / .066) - 111.363636px);
+		padding-right: calc((1vw / .066) - 111.363636px);
+	}
+	/* At desktop screen widths, hide short text and show full text */
+	.kt-full-text { display: inline-block; }
+  .kt-short-text { display: none; }
+  #menu-main-menu > li {
+    line-height: inherit;
+  }
+
+  .better-responsive-menu .site-header .menu-toggle {
 		width: initial;
 	}
 	.better-responsive-menu .site-header .menu-toggle::before {
@@ -576,11 +470,6 @@ input[type=image]{
 	#menu-main-menu > li > a {
 		white-space: nowrap;
 	}
-
-
-
-
-
 
 	/* Remove mobile edits to logo, donate button, nav menu, and slider.*/
 	#masthead {
@@ -616,10 +505,7 @@ input[type=image]{
 		letter-spacing: 1.08px;
 	}
 
-
-
-
-/* Add these to use flex to push last menu item to the far right.*/
+  /* Add these to use flex to push last menu item to the far right.*/
 	#header-right-section {
 		float: none;
 	}
@@ -636,17 +522,86 @@ input[type=image]{
 		flex-direction: row;
 	}
   .kt-don-but {
-  	height: 45px;
+    height: 45px;
+    letter-spacing: 3px;
   }
   .kt-don-menu {
-	/* .kt-don-but { */
 		margin-left: auto;
 		width: 220px;
 		flex: 0 1 auto;
 	}
-	
 }
 
-/* End header edits applying only to desktop screen widths. */
+@media screen and (min-width: 900px) {
+	#menu-main-menu li > a, .kt-don-but {
+		font-size: 15px;
+	}
+	.kt-don-but {
+		padding: initial;
+	}
+}
 
-/* Begin header edits. */
+@media screen and (max-width: 768px) {
+	.header-image {
+		border: none;
+	}
+	/* Ensure that at screen width 600 px, the header doesn't automatically obtain extra top padding/margin. */
+	#header-left-section {
+		display: none;
+	}
+	/* Ensure opening hamburger menu does not add padding to header elements. */
+	.main-small-navigation a.kt-don-menu {
+		padding: 0;
+	}
+	.better-responsive-menu #header-text-nav-container {
+		margin-bottom: 0;
+	}
+	.inner-wrap {
+		width: 100%;
+	}
+	.better-responsive-menu #header-right-section {
+		padding: 0;
+		margin: 0;
+	}
+	.better-responsive-menu #site-navigation {
+		margin-top: 0;
+	}
+
+	#masthead > a {
+		margin-left: var(--head-mob-lr-margin);
+		margin-right: 6vw;
+	}
+	#header-text-nav-container {
+		margin-right:  var(--head-mob-lr-margin);
+		top: calc(-500vw / 467 + ((767px * 5) / 467) );
+	}
+	.kt-don-menu {
+		margin-right: 2vw;
+	}
+	/* Set font-size of hamburger menu. */
+
+	.better-responsive-menu .site-header .menu-toggle {
+		color: #000;
+		background-color: #fff;
+	}
+
+	/* Set top padding to be 30 px @ screen width 767 px. */
+	#masthead {
+		padding-top: var(--head-pad-top);
+	}
+	/* Set bottom padding to be 5/3 of top padding. */
+	#masthead > a, #header-text-nav-container {
+		padding-bottom: calc(5*var(--head-pad-top) / 3);
+	}
+	.kt-don-but {
+		border-radius: 50px;
+  }
+  /* Ensure mobile menu is wide enough.*/
+  .better-responsive-menu #site-navigation .menu-primary-container {
+    width: 150%;
+    left: -50%;
+  }
+
+}
+
+/* End header edits. */
