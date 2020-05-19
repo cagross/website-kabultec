@@ -460,21 +460,28 @@ function kt_enqueue_script2() {
 }
 add_action( 'wp_enqueue_scripts', 'kt_enqueue_script2' );
 
-// Insert donate button into main menu.
-function kt_menu_button($nav_menu) {
+/**
+ * Insert donate button markup into main menu.
+ *
+ * @since 1.0.0
+ *
+ * @param array $nav_menu A string containing the markup for the navigation menu.
+ * @return string Returns an array containing the markup for the navigation menu.
+ */
+function kt_menu_button( $nav_menu ) {
 
-  $kt_but_markup = '
-    <a href="/donate" class="kt-don-menu">
-      <button class="kt-don-but">
-        <span class="kt-full-text">
-          Donate Now
-        </span>
-        <span class="kt-short-text">
-          Donate
-        </span>
-      </button>
-    </a>
-  ';
-  return $nav_menu . $kt_but_markup;
+	$kt_but_markup = '
+      <a href="/donate" class="kt-don-menu">
+        <button class="kt-don-but">
+          <span class="kt-full-text">
+            Donate Now
+          </span>
+          <span class="kt-short-text">
+            Donate
+          </span>
+        </button>
+      </a>
+    ';
+	return $nav_menu . $kt_but_markup;
 }
-add_filter( 'wp_nav_menu', 'kt_menu_button');
+add_filter( 'wp_nav_menu', 'kt_menu_button' );
