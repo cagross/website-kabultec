@@ -110,12 +110,6 @@ article .entry-content p img {
 }
 
 /* These ensure the Talks/Symposia tables are formatted properly.*/
-#tablepress-12 > tbody > tr > td.column-1 {
-  /*text-align: center;*/
-}
-#tablepress-12 > tbody > tr > td.column-2 {
-  /*text-align: center;*/
-}
 #tablepress-12 > tbody > tr > td.column-4 {
   text-align: center;
 }
@@ -317,7 +311,7 @@ article .entry-content p img {
 
 /*Ensures mouse pointer on Donate page changes accordingly.*/
 input[type=image]{
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* This ensures thumbnails from Ultimate Post List plugin on home page are responsive.*/
@@ -338,7 +332,7 @@ input[type=image]{
 
 /* Ensure blog posts from guest contributors are italicized in home page slider. */
 .kt_ga {
-	font-style: italic;
+  font-style: italic;
 }
 
 /* Ensure current page is underlined in page outlines. */
@@ -346,13 +340,6 @@ input[type=image]{
   text-decoration: underline;
   font-weight: bold;
 }
-
-
-
-
-
-
-
 
 /* Begin header edits. */
 :root {
