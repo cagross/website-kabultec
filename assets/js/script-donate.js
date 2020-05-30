@@ -1,39 +1,42 @@
 // console.log(555);
 
 
-
+// form = document.getElementById('myForm');
 // document.getElementById("myBtn").onclick = displayDate;
+document.getElementById("donBut").onclick = calculateOrder;
+// document.getElementById("myBtn").onclick = calculateOrder;
+
+// document.getElementById("donBut").onclick = displayDate;
+
 
 // function displayDate() {
 //   document.getElementById("demo").innerHTML = Date();
 // }
 
 // function CalculateOrder(form) {
-function CalculateOrder(myform) {
+// function calculateOrder(myform) {
+function calculateOrder() {
+
 
   // console.log(555);
-  // alert(555);
+  // alert(444);
 
   
   "use strict";
 	var radG1;
 
+  const myForm = document.getElementById("myForm");
+
 	// i = 0; i < document.myform.os0.length; i++){
 	//  nt.myform.os0[i].checked==true){radG1=document.myform.os0[i].value;}
   // }
-  const els = myform.getElementsByClassName('raddy')
-  // for (var i = 0; i < myform.os0.length; i++){
+  // const els = myform.getElementsByClassName('raddy')
+  const els = document.getElementsByClassName('raddy')
+
   for (var i = 0; i < els.length; i++){
-
-    // if(myform.os0[i].checked==true){
     if(els[i].checked==true){
-
-      // radG1 = myform.os0[i].value;
-      // alert('Starting');
-      // myform.amount.value = myform.os0[i].value;
-      myform.amount.value = els[i].value;
+      myForm.amount.value = els[i].value;
       return;
-
     }
   }
 
