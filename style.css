@@ -645,5 +645,12 @@ and home page slider is on the line below it. */
   margin-bottom: 0;
 }
 
+/* Ensure l/r margin added via Elementor for desktop layouts is removed for mobile layouts. */
+@media screen and (max-width: 768px) {
+  .kt-don-row .elementor-widget-container {
+    margin: 0 !important;
+  }
+}
+
 
 /* End donate page edits. */
