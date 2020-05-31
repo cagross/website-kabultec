@@ -638,3 +638,12 @@ and home page slider is on the line below it. */
 }
 
 /* End header edits. */
+
+/* Begin donate page edits. */
+
+.kt-don-row img {
+  margin-bottom: 0;
+}
+
+
+/* End donate page edits. */
