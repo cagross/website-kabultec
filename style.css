@@ -641,10 +641,10 @@ and home page slider is on the line below it. */
 
 /* Begin donate page edits. */
 
+/* Style the preset donation row. */
 .kt-don-row img {
   margin-bottom: 0;
 }
-
 /* Ensure l/r margin added via Elementor for desktop layouts is removed for mobile layouts. */
 @media screen and (max-width: 768px) {
   .kt-don-row .elementor-widget-container {
@@ -652,5 +652,17 @@ and home page slider is on the line below it. */
   }
 }
 
+/* Style the custom donation row. */
+.kt-don-custom p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+}
+.kt-don-custom input {
+  margin: 0;
+  padding: 0;
+  height: 48px;
+  border: solid 1px #979797;
+}
 
 /* End donate page edits. */
