@@ -657,12 +657,28 @@ and home page slider is on the line below it. */
   margin: 0;
   font-size: 18px;
   line-height: 22px;
+  
+  white-space: nowrap;
+  border: solid 1px #979797;
 }
 .kt-don-custom input {
   margin: 0;
   padding: 0;
   height: 48px;
   border: solid 1px #979797;
+}
+
+
+.kt-don-custom input {
+  width: 50%;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 767px) {
+  .kt-don-custom input {
+    width: 90%;
+    /* margin-left: 2%; */
+  }
 }
 
 /* End donate page edits. */
