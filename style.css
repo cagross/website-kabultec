@@ -653,32 +653,33 @@ and home page slider is on the line below it. */
 }
 
 /* Style the custom donation row. */
+.kt-don-cust-el {
+  white-space: nowrap;
+}
 .kt-don-custom p {
   margin: 0;
   font-size: 18px;
   line-height: 22px;
-  
-  white-space: nowrap;
-  border: solid 1px #979797;
 }
 .kt-don-custom input {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 0 10px;
+  padding: 0 0 0 5px;
   height: 48px;
+  width: 75%;
   border: solid 1px #979797;
 }
-
-
-.kt-don-custom input {
-  width: 50%;
-  margin-left: 10px;
-}
-
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 300px) {
   .kt-don-custom input {
-    width: 90%;
-    /* margin-left: 2%; */
+    width: 50%;
   }
 }
-
+@media screen and (min-width: 767px) {
+  .kt-don-custom input {
+    width: 100%;
+  }
+  .kt-don-custom p {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 /* End donate page edits. */
