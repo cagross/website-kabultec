@@ -17,11 +17,6 @@ document.getElementById("donBut").onclick = calculateOrder;
 // function calculateOrder(myform) {
 function calculateOrder() {
 
-
-  // console.log(555);
-  // alert(444);
-
-  
   "use strict";
 	var radG1;
 
@@ -32,10 +27,17 @@ function calculateOrder() {
   // }
   // const els = myform.getElementsByClassName('raddy')
   const els = document.getElementsByClassName('raddy')
-
   for (var i = 0; i < els.length; i++){
     if(els[i].checked==true){
       myForm.amount.value = els[i].value;
+      return;
+    }
+  }
+
+  const elsy = document.getElementsByClassName('kt-cust-amt')
+  for (var i = 0; i < els.length; i++){
+    if(elsy[i].value){
+      myForm.amount.value = elsy[i].value;
       return;
     }
   }
