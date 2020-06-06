@@ -1,10 +1,66 @@
+"use strict";
 // console.log(555);
 
 
+// window.addEventListener('load', function () {
+  // alert("It's loaded!")
+const myEls = document.querySelectorAll('.amt');
+
+for (var i = 0; i < myEls.length; i++){
+  console.log(i)
+  console.log(myEls[i])
+
+  myEls[i].onclick = myFunc;
+}
+
+
+
+
+
+// document.querySelectorAll('.amt').onclick = myFunc;
+
+// })
+
+function myFunc() {
+    // console.log(555)
+    // console.log(this)
+    
+  const theEls = document.querySelectorAll('.amt');
+
+  const classSelect = 'kt-amt-select';  
+
+  for (var i = 0; i < theEls.length; i++){
+    if (theEls[i].classList.contains(classSelect)) {
+      // theEls[i].classList.remove(classSelect);
+      theEls[i].classList.toggle(classSelect);
+
+      console.log('removed ' + i)
+    } else {
+      if (theEls[i] === this) {
+        this.classList.toggle(classSelect);
+        console.log('added ' + i);
+      }
+    }
+  }
+
+
+  
+  // const myForm = document.getElementById("myForm");
+  // myForm.amount.value = 10;
+  // alert(myForm.amount.value)
+}
+
+
 // form = document.getElementById('myForm');
-// document.getElementById("myBtn").onclick = displayDate;
-document.getElementById("donBut").onclick = calculateOrder;
-// document.getElementById("myBtn").onclick = calculateOrder;
+
+
+
+// document.getElementById("donBut").onclick = calculateOrder;
+
+
+
+
+
 
 // document.getElementById("donBut").onclick = displayDate;
 
@@ -17,31 +73,32 @@ document.getElementById("donBut").onclick = calculateOrder;
 // function calculateOrder(myform) {
 function calculateOrder() {
 
-  "use strict";
-	var radG1;
+  // const myForm = document.getElementById("myForm");
 
-  const myForm = document.getElementById("myForm");
-
-	// i = 0; i < document.myform.os0.length; i++){
-	//  nt.myform.os0[i].checked==true){radG1=document.myform.os0[i].value;}
+  // const els = document.getElementsByClassName('raddy')
+  // for (var i = 0; i < els.length; i++){
+  //   if(els[i].checked==true){
+  //     myForm.amount.value = els[i].value;
+  //     return;
+  //   }
   // }
-  // const els = myform.getElementsByClassName('raddy')
-  const els = document.getElementsByClassName('raddy')
-  for (var i = 0; i < els.length; i++){
-    if(els[i].checked==true){
-      myForm.amount.value = els[i].value;
-      return;
-    }
-  }
 
-  const elsy = document.getElementsByClassName('kt-cust-amt')
-  for (var i = 0; i < els.length; i++){
-    if(elsy[i].value){
-      myForm.amount.value = elsy[i].value;
-      return;
-    }
-  }
+  // const elsy = document.getElementsByClassName('kt-cust-amt')
+  // for (var i = 0; i < els.length; i++){
+  //   if(elsy[i].value){
+  //     myForm.amount.value = elsy[i].value;
+  //     return;
+  //   }
+  // }
 
+
+
+
+
+
+
+
+	// var radG1;
 	// console.log(radG1);
 
 	// if(radG1 == "10")

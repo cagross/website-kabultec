@@ -682,4 +682,9 @@ and home page slider is on the line below it. */
     justify-content: flex-end;
   }
 }
+.kt-amt-select {
+  border: solid 1px #979797;
+
+}
+
 /* End donate page edits. */
