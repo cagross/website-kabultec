@@ -4,7 +4,7 @@
 
 // window.addEventListener('load', function () {
   // alert("It's loaded!")
-const myEls = document.querySelectorAll('.amt');
+const myEls = document.querySelectorAll('.kt-amt');
 
 for (var i = 0; i < myEls.length; i++){
   console.log(i)
@@ -17,7 +17,7 @@ for (var i = 0; i < myEls.length; i++){
 
 
 
-// document.querySelectorAll('.amt').onclick = myFunc;
+// document.querySelectorAll('.kt-amt').onclick = myFunc;
 
 // })
 
@@ -25,13 +25,12 @@ function myFunc() {
     // console.log(555)
     // console.log(this)
     
-  const theEls = document.querySelectorAll('.amt');
+  const theEls = document.querySelectorAll('.kt-amt');
 
-  const classSelect = 'kt-amt-select';  
+  const classSelect = 'kt-amt-select';
 
   for (var i = 0; i < theEls.length; i++){
     if (theEls[i].classList.contains(classSelect)) {
-      // theEls[i].classList.remove(classSelect);
       theEls[i].classList.toggle(classSelect);
 
       console.log('removed ' + i)
