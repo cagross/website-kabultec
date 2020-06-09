@@ -1,15 +1,32 @@
 "use strict";
-// console.log(555);
 
+const amounts = []
+  amounts['a'] = 5
+  amounts['b'] = 10
+  amounts['c'] = 100
+
+
+
+for (let key in amounts) {
+  let amtId = `kt-amt-${key}`  
+  // console.log(amtId);
+  let amtEl = document.getElementById(amtId)
+  // console.log(amtEl);
+  amtEl.setAttribute("data-amt", `${amounts[key]}`);
+  // console.log(`${amounts[key]}`);
+}
+
+
+
+// const testy = document.getElementById('kt-amt-a')
+// testy.setAttribute("data-amt", 10);
+// console.log(testy.dataset.amt)
 
 // window.addEventListener('load', function () {
   // alert("It's loaded!")
 const myEls = document.querySelectorAll('.kt-amt');
 
 for (var i = 0; i < myEls.length; i++){
-  console.log(i)
-  console.log(myEls[i])
-
   myEls[i].onclick = myFunc;
 }
 
@@ -33,20 +50,17 @@ function myFunc() {
     if (theEls[i].classList.contains(classSelect)) {
       theEls[i].classList.toggle(classSelect);
 
-      console.log('removed ' + i)
+      // console.log('removed ' + i)
     } else {
       if (theEls[i] === this) {
         this.classList.toggle(classSelect);
-        console.log('added ' + i);
+        // console.log('added ' + i);
       }
     }
   }
-
-
-  
-  // const myForm = document.getElementById("myForm");
-  // myForm.amount.value = 10;
-  // alert(myForm.amount.value)
+ 
+  const myForm = document.getElementById("myForm");
+  myForm.amount.value = this.dataset.amt;
 }
 
 
