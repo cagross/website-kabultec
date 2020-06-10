@@ -1,8 +1,8 @@
 "use strict";
 
 const amounts = []
-  amounts['a'] = 5
-  amounts['b'] = 10
+  amounts['a'] = 10
+  amounts['b'] = 50
   amounts['c'] = 100
 
 
