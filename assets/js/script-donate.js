@@ -48,13 +48,12 @@ function myFunc() {
 
   for (var i = 0; i < theEls.length; i++){
     if (theEls[i].classList.contains(classSelect)) {
-      theEls[i].classList.toggle(classSelect);
-
-      // console.log('removed ' + i)
+      if(theEls[i] !== this) {
+        theEls[i].classList.toggle(classSelect);
+      }
     } else {
       if (theEls[i] === this) {
         this.classList.toggle(classSelect);
-        // console.log('added ' + i);
       }
     }
   }

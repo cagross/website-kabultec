@@ -660,9 +660,11 @@ and home page slider is on the line below it. */
 
 /* Style the custom donation row. */
 .kt-don-amt {
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: 900;
   line-height: 30px;
   margin-bottom: 20px;
+  color: #529745;
 }
 
 .kt-don-cust-el {
@@ -698,5 +700,14 @@ and home page slider is on the line below it. */
 .kt-don-row .elementor-image-box-wrapper {
   outline: solid 1px #979797;
 }
+
+.kt-amt-select .elementor-image-box-content {
+  background: #ad2e36;
+  color: #fff;
+}
+.kt-amt-select .kt-don-amt {
+  color: #fff
+}
+
 
 /* End donate page edits. */
