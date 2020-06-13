@@ -655,6 +655,7 @@ and home page slider is on the line below it. */
   .kt-don-row .kt-don-text {
     min-height: 200px;
     padding:  25px 25px;
+    color: #fff;
   }
 }
 
@@ -664,7 +665,7 @@ and home page slider is on the line below it. */
   font-weight: 900;
   line-height: 30px;
   margin-bottom: 20px;
-  color: #529745;
+  /* color: #529745; */
 }
 
 .kt-don-cust-el {
