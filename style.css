@@ -710,5 +710,10 @@ and home page slider is on the line below it. */
   color: #fff
 }
 
+.kt-don-row-but img {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
 
 /* End donate page edits. */
