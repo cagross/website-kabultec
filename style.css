@@ -703,7 +703,8 @@ and home page slider is on the line below it. */
 }
 
 .kt-amt-select .elementor-image-box-content {
-  background: #ad2e36;
+  /* background: #ad2e36; */
+  background: #529745;
   color: #fff;
 }
 .kt-amt-select .kt-don-amt {
@@ -713,6 +714,18 @@ and home page slider is on the line below it. */
 .kt-don-row-but img {
   width: 90%;
   margin-bottom: 20px;
+}
+
+.kt-amt-select .kt-don-row-but-red {
+  display: inline;
+}
+
+.kt-amt-select .kt-don-row-but-black {
+  display: none;
+}
+
+.testy {
+  display: none;
 }
 
 

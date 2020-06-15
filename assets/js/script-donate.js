@@ -1,5 +1,11 @@
 "use strict";
 
+const test = document.getElementsByClassName('kt-don-but-row-red')
+for (let i = 0; i < test.length; i++){
+  // test[i].classList.add('testy')
+}
+
+
 const amounts = []
   amounts['a'] = 10
   amounts['b'] = 50
@@ -50,6 +56,11 @@ function myFunc() {
     if (theEls[i].classList.contains(classSelect)) {
       if(theEls[i] !== this) {
         theEls[i].classList.toggle(classSelect);
+        const test = document.getElementsByClassName('kt-don-but-row-red')
+        for (let j = 0; j < test.length; j++){
+          test[j].classList.toggle('testy');
+        }
+
       }
     } else {
       if (theEls[i] === this) {
