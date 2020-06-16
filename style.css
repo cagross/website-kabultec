@@ -655,7 +655,7 @@ and home page slider is on the line below it. */
   .kt-don-row .kt-don-text {
     min-height: 200px;
     padding:  25px 25px;
-    color: #fff;
+    /* color: #fff; */
   }
 }
 
@@ -665,7 +665,7 @@ and home page slider is on the line below it. */
   font-weight: 900;
   line-height: 30px;
   margin-bottom: 20px;
-  /* color: #529745; */
+  color: #529745;
 }
 
 .kt-don-cust-el {
@@ -697,19 +697,33 @@ and home page slider is on the line below it. */
     justify-content: flex-end;
   }
 }
-/* .kt-amt-select .elementor-image-box-wrapper { */
 .kt-don-row .elementor-image-box-wrapper {
   outline: solid 1px #979797;
 }
 
+/*.elementor-widget-container:hover, .kt-amt-select .elementor-widget-container {
+  outline: solid 5px #529745;
+}
+.elementor-image-box-content:hover, .kt-amt-select .elementor-image-box-content {
+  background: #ad2e36;
+  /~ background: #529745; ~/
+  color: #fff;
+}
+.kt-don-amt:hover, .kt-amt-select .kt-don-amt {
+  color: #fff;
+}*/
+.kt-amt-select .elementor-widget-container {
+  outline: solid 5px #529745;
+}
 .kt-amt-select .elementor-image-box-content {
-  /* background: #ad2e36; */
-  background: #529745;
+  background: #ad2e36;
+  /* background: #529745; */
   color: #fff;
 }
 .kt-amt-select .kt-don-amt {
-  color: #fff
+  color: #fff;
 }
+
 
 .kt-don-row-but img {
   width: 90%;

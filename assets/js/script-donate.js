@@ -1,9 +1,14 @@
 "use strict";
 
-const test = document.getElementsByClassName('kt-don-but-row-red')
-for (let i = 0; i < test.length; i++){
-  // test[i].classList.add('testy')
+
+function myScript() {
+  this.classList.toggle('kt-amt-select');
 }
+
+
+
+
+
 
 
 const amounts = []
@@ -34,6 +39,8 @@ const myEls = document.querySelectorAll('.kt-amt');
 
 for (var i = 0; i < myEls.length; i++){
   myEls[i].onclick = myFunc;
+  myEls[i].addEventListener("mouseenter", myScript);
+  myEls[i].addEventListener("mouseleave", myScript);
 }
 
 
@@ -56,7 +63,7 @@ function myFunc() {
     if (theEls[i].classList.contains(classSelect)) {
       if(theEls[i] !== this) {
         theEls[i].classList.toggle(classSelect);
-        const test = document.getElementsByClassName('kt-don-but-row-red')
+        const test = document.getElementsByClassName('kt-don-row-but-red')
         for (let j = 0; j < test.length; j++){
           test[j].classList.toggle('testy');
         }
