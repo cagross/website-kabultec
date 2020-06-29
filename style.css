@@ -729,6 +729,11 @@ and home page slider is on the line below it. */
   width: 90%;
   margin-bottom: 20px;
 }
+.donBut {
+  height: auto;
+  width: 90%;
+  margin-bottom: 20px;
+}
 
 .kt-amt-select .kt-don-row-but-red {
   display: inline;
