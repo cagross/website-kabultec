@@ -5,7 +5,15 @@ function myScript() {
   this.classList.toggle('kt-amt-select');
 }
 
+function myScriptEnter() {
+  this.classList.toggle('kt-amt-select');
+  document.getElementsByClassName('donBut')[0].src = '/wp-content/uploads/2020/06/Donate-Button-outline-white.png'
+}
 
+function myScriptLeave() {
+  this.classList.toggle('kt-amt-select');
+  document.getElementsByClassName('donBut')[0].src = '/wp-content/uploads/2020/06/Donate-Button-outline-black.png'
+}
 
 
 
@@ -20,87 +28,61 @@ const amounts = []
 
 for (let key in amounts) {
   let amtId = `kt-amt-${key}`  
-  // console.log(amtId);
   let amtEl = document.getElementById(amtId)
-  // console.log(amtEl);
   amtEl.setAttribute("data-amt", `${amounts[key]}`);
-  // console.log(`${amounts[key]}`);
 }
 
 
 
-// const testy = document.getElementById('kt-amt-a')
-// testy.setAttribute("data-amt", 10);
-// console.log(testy.dataset.amt)
 
-// window.addEventListener('load', function () {
-  // alert("It's loaded!")
+
+
 const myEls = document.querySelectorAll('.kt-amt');
 
 for (var i = 0; i < myEls.length; i++){
   myEls[i].onclick = myFunc;
-  myEls[i].addEventListener("mouseenter", myScript);
-  myEls[i].addEventListener("mouseleave", myScript);
+  // myEls[i].addEventListener("mouseenter", myScript);
+  // myEls[i].addEventListener("mouseleave", myScript);
 }
 
 
 
-
-
-// document.querySelectorAll('.kt-amt').onclick = myFunc;
-
-// })
-
 function myFunc() {
-    // console.log(555)
-    // console.log(this)
-    
-  const theEls = document.querySelectorAll('.kt-amt');
 
-  const classSelect = 'kt-amt-select';
+  const donateCardElements = document.querySelectorAll('.kt-amt');
 
-  for (var i = 0; i < theEls.length; i++){
-    if (theEls[i].classList.contains(classSelect)) {
-      if(theEls[i] !== this) {
-        theEls[i].classList.toggle(classSelect);
-        const test = document.getElementsByClassName('kt-don-row-but-red')
+  const classHighlighted = 'kt-amt-select';
+
+  //Loop through all donation cards, one by one.
+  for (var i = 0; i < donateCardElements.length; i++){
+    // If this card is not already highlighted, AND if this card is not the card that has been clicked (or mouse entered/left), then ignore it and cycle to the next iteration in the loop.
+    if (!donateCardElements[i].classList.contains(classHighlighted) && donateCardElements[i] !== this) {continue}
+
+    // if (donateCardElements[i].classList.contains(classHighlighted)) {//If this particular donation card is already highlighted, do the following.
+      // if(donateCardElements[i] !== this) {
+        donateCardElements[i].classList.toggle(classHighlighted);
+        // const test = document.querySelectorAll('.kt-don-row-but img')
+        const test = donateCardElements[i].querySelectorAll('.kt-don-row-but img')
+
         for (let j = 0; j < test.length; j++){
           test[j].classList.toggle('testy');
         }
-
-      }
-    } else {
-      if (theEls[i] === this) {
-        this.classList.toggle(classSelect);
-      }
-    }
+      // }
+    // } else {//If this particular donation card is not already highlighted, do the following.
+    //   // if (donateCardElements[i] === this) {
+    //     this.classList.toggle(classHighlighted);
+    //     const test = document.querySelectorAll('.kt-don-row-but img')
+    //     for (let j = 0; j < test.length; j++){
+    //       test[j].classList.toggle('testy');
+    //     }
+      // }
+    // }
   }
  
   const myForm = document.getElementById("myForm");
   myForm.amount.value = this.dataset.amt;
 }
 
-
-// form = document.getElementById('myForm');
-
-
-
-// document.getElementById("donBut").onclick = calculateOrder;
-
-
-
-
-
-
-// document.getElementById("donBut").onclick = displayDate;
-
-
-// function displayDate() {
-//   document.getElementById("demo").innerHTML = Date();
-// }
-
-// function CalculateOrder(form) {
-// function calculateOrder(myform) {
 function calculateOrder() {
 
   // const myForm = document.getElementById("myForm");
@@ -166,3 +148,5 @@ function calculateOrder() {
 
 
   }
+
+  

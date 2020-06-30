@@ -735,11 +735,11 @@ and home page slider is on the line below it. */
   margin-bottom: 20px;
 }
 
-.kt-amt-select .kt-don-row-but-red {
+.kt-amt-select .kt-don-row-but-default {
   display: inline;
 }
 
-.kt-amt-select .kt-don-row-but-black {
+.kt-amt-select .kt-don-row-but-select {
   display: none;
 }
 
