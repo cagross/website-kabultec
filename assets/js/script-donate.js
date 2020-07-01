@@ -62,10 +62,17 @@ function myFunc() {
       // if(donateCardElements[i] !== this) {
         donateCardElements[i].classList.toggle(classHighlighted);
         // const test = document.querySelectorAll('.kt-don-row-but img')
-        const test = donateCardElements[i].querySelectorAll('.kt-don-row-but img')
-
+        // const test = donateCardElements[i].querySelectorAll('.kt-don-row-but img')
+        let test
+        test = donateCardElements[i].querySelectorAll('.kt-don-row-but .donBut')
         for (let j = 0; j < test.length; j++){
+          console.log(j)
           test[j].classList.toggle('testy');
+        }
+        test = donateCardElements[i].querySelectorAll('.kt-don-row-but img')
+        for (let k = 0; k < test.length; k++){
+          console.log(k)
+          test[k].classList.toggle('testy');
         }
       // }
     // } else {//If this particular donation card is not already highlighted, do the following.
