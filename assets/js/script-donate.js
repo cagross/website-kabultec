@@ -1,5 +1,19 @@
 "use strict";
 
+/* Set the value of the data-amt attribute on each donation card.  Used by <form> to insert the donation amount upon submission. */
+const amounts = []
+  amounts['a'] = 10
+  amounts['b'] = 50
+  amounts['c'] = 100
+
+for (let key in amounts) {
+  let amtId = `kt-amt-${key}`  
+  let amtEl = document.getElementById(amtId)
+  amtEl.setAttribute("data-amt", `${amounts[key]}`);
+}
+
+
+
 
 function myScript() {
   this.classList.toggle('kt-amt-select');
@@ -16,78 +30,54 @@ function myScriptLeave() {
 }
 
 
-
-
-
-const amounts = []
-  amounts['a'] = 10
-  amounts['b'] = 50
-  amounts['c'] = 100
-
-
-
-for (let key in amounts) {
-  let amtId = `kt-amt-${key}`  
-  let amtEl = document.getElementById(amtId)
-  amtEl.setAttribute("data-amt", `${amounts[key]}`);
-}
-
-
-
-
-
-
 const myEls = document.querySelectorAll('.kt-amt');
 
 for (var i = 0; i < myEls.length; i++){
-  myEls[i].onclick = myFunc;
+  // myEls[i].onclick = myFunc;
   // myEls[i].addEventListener("mouseenter", myScript);
   // myEls[i].addEventListener("mouseleave", myScript);
+  myEls[i].addEventListener("mouseenter", myFunc);
+  myEls[i].addEventListener("mouseleave", myFunc);
 }
 
 
 
-function myFunc() {
+function myFunc(evt) {
 
   const donateCardElements = document.querySelectorAll('.kt-amt');
-
   const classHighlighted = 'kt-amt-select';
+
+
+  // if (evt.type !== 'click' && this.classList.contains('kt-clicked')) {
+  //   return;
+  // }
+
+  // if (evt.type === 'click') {
+  //   if (classList.contains(classHighlighted)) {
+  //     this.classList.toggle('kt-clicked');  
+  //   }
+  //   this.classList.toggle('kt-clicked');
+  //   return;
+  // }
 
   //Loop through all donation cards, one by one.
   for (var i = 0; i < donateCardElements.length; i++){
     // If this card is not already highlighted, AND if this card is not the card that has been clicked (or mouse entered/left), then ignore it and cycle to the next iteration in the loop.
     if (!donateCardElements[i].classList.contains(classHighlighted) && donateCardElements[i] !== this) {continue}
-
-    // if (donateCardElements[i].classList.contains(classHighlighted)) {//If this particular donation card is already highlighted, do the following.
-      // if(donateCardElements[i] !== this) {
-        donateCardElements[i].classList.toggle(classHighlighted);
-        // const test = document.querySelectorAll('.kt-don-row-but img')
-        // const test = donateCardElements[i].querySelectorAll('.kt-don-row-but img')
-        let test
-        test = donateCardElements[i].querySelectorAll('.kt-don-row-but .donBut')
-        for (let j = 0; j < test.length; j++){
-          console.log(j)
-          test[j].classList.toggle('testy');
-        }
-        test = donateCardElements[i].querySelectorAll('.kt-don-row-but img')
-        for (let k = 0; k < test.length; k++){
-          console.log(k)
-          test[k].classList.toggle('testy');
-        }
-      // }
-    // } else {//If this particular donation card is not already highlighted, do the following.
-    //   // if (donateCardElements[i] === this) {
-    //     this.classList.toggle(classHighlighted);
-    //     const test = document.querySelectorAll('.kt-don-row-but img')
-    //     for (let j = 0; j < test.length; j++){
-    //       test[j].classList.toggle('testy');
-    //     }
-      // }
-    // }
+    // If this card is the card that was clicked, OR it was already highlighted, toggle the highlighted class on it, and ensure the correct button is displayed on it.
+    donateCardElements[i].classList.toggle(classHighlighted);
+    const buttons = donateCardElements[i].querySelectorAll('.kt-don-row-but .donBut')
+    for (let j = 0; j < buttons.length; j++){
+      buttons[j].classList.toggle('testy');
+    }
   }
  
+  //Set the forms amount value to the value of the clicked card's data-amt attribute.
   const myForm = document.getElementById("myForm");
   myForm.amount.value = this.dataset.amt;
+
+
+
 }
 
 function calculateOrder() {

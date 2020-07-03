@@ -726,8 +726,8 @@ and home page slider is on the line below it. */
 
 
 .kt-don-row-but img {
-  width: 90%;
-  margin-bottom: 20px;
+  /* width: 90%;
+  margin-bottom: 20px; */
 }
 .donBut {
   height: auto;
@@ -735,16 +735,22 @@ and home page slider is on the line below it. */
   margin-bottom: 20px;
 }
 
-.kt-amt-select .kt-don-row-but-default {
+/* .kt-amt-select .kt-don-row-but-default {
   display: inline;
 }
 
 .kt-amt-select .kt-don-row-but-select {
   display: none;
-}
+} */
 
 .testy {
   display: none;
+}
+
+#myForm button {
+  background-color: initial;
+  padding: 0;
+  width: 100%;
 }
 
 
