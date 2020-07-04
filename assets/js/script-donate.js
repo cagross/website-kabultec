@@ -68,7 +68,7 @@ function myFunc(evt) {
     donateCardElements[i].classList.toggle(classHighlighted);
     const buttons = donateCardElements[i].querySelectorAll('.kt-don-row-but .donBut')
     for (let j = 0; j < buttons.length; j++){
-      buttons[j].classList.toggle('testy');
+      buttons[j].classList.toggle('kt-hidden');
     }
   }
  

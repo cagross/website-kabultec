@@ -731,27 +731,32 @@ and home page slider is on the line below it. */
 }
 .donBut {
   height: auto;
-  width: 90%;
+  /* width: 90%; */
+  width: 100%;
+
   margin-bottom: 20px;
 }
-
-/* .kt-amt-select .kt-don-row-but-default {
-  display: inline;
+.kt-button-cont {
+  width: 90%;
+  margin: auto;
+  transition: width 0.75s;
+}
+.kt-amt-select .kt-don-row-but .kt-button-cont {
+  width: 97%;
 }
 
-.kt-amt-select .kt-don-row-but-select {
-  display: none;
-} */
-
-.testy {
+.kt-hidden {
   display: none;
 }
 
-#myForm button {
+/* #myForm button { */
+.kt-don-row button {
   background-color: initial;
   padding: 0;
   width: 100%;
 }
+
+
 
 
 /* End donate page edits. */
