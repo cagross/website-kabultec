@@ -666,10 +666,17 @@ and home page slider is on the line below it. */
   line-height: 30px;
   margin-bottom: 20px;
   color: #529745;
+  /* height: 35px; */
 }
 
 .kt-don-cust-el {
   white-space: nowrap;
+  /* margin: 0; */
+}
+.kt-don-cust-el input {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 .kt-don-custom p {
   margin: 0;
@@ -701,17 +708,6 @@ and home page slider is on the line below it. */
   outline: solid 1px #979797;
 }
 
-/*.elementor-widget-container:hover, .kt-amt-select .elementor-widget-container {
-  outline: solid 5px #529745;
-}
-.elementor-image-box-content:hover, .kt-amt-select .elementor-image-box-content {
-  background: #ad2e36;
-  /~ background: #529745; ~/
-  color: #fff;
-}
-.kt-don-amt:hover, .kt-amt-select .kt-don-amt {
-  color: #fff;
-}*/
 .kt-amt-select .elementor-widget-container {
   outline: solid 5px #529745;
 }
@@ -725,10 +721,7 @@ and home page slider is on the line below it. */
 }
 
 
-.kt-don-row-but img {
-  /* width: 90%;
-  margin-bottom: 20px; */
-}
+
 .donBut {
   height: auto;
   /* width: 90%; */
