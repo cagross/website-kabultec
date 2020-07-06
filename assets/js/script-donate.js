@@ -42,9 +42,11 @@ for (var i = 0; i < myEls.length; i++){
 
 
 
-function myFunc(evt) {
+// function myFunc(evt) {
+function myFunc() {
 
-  const donateCardElements = document.querySelectorAll('.kt-amt');
+
+  // const donateCardElements = document.querySelectorAll('.kt-amt');
   const classHighlighted = 'kt-amt-select';
 
 
@@ -61,21 +63,43 @@ function myFunc(evt) {
   // }
 
   //Loop through all donation cards, one by one.
-  for (var i = 0; i < donateCardElements.length; i++){
+  // for (var i = 0; i < donateCardElements.length; i++){
     // If this card is not already highlighted, AND if this card is not the card that has been clicked (or mouse entered/left), then ignore it and cycle to the next iteration in the loop.
-    if (!donateCardElements[i].classList.contains(classHighlighted) && donateCardElements[i] !== this) {continue}
+    // if (!donateCardElements[i].classList.contains(classHighlighted) && donateCardElements[i] !== this) {continue}
+    // // If this card is the card that was clicked, OR it was already highlighted, toggle the highlighted class on it, and ensure the correct button is displayed on it.
+    // donateCardElements[i].classList.toggle(classHighlighted);
+    // const buttons = donateCardElements[i].querySelectorAll('.kt-don-row-but .donBut')
+    // for (let j = 0; j < buttons.length; j++){
+    //   buttons[j].classList.toggle('kt-hidden');
+    // }
+    // if (!donateCardElements[i].classList.contains(classHighlighted) && donateCardElements[i] !== this) {continue}
     // If this card is the card that was clicked, OR it was already highlighted, toggle the highlighted class on it, and ensure the correct button is displayed on it.
-    donateCardElements[i].classList.toggle(classHighlighted);
-    const buttons = donateCardElements[i].querySelectorAll('.kt-don-row-but .donBut')
+    this.classList.toggle(classHighlighted);
+    const buttons = this.querySelectorAll('.kt-don-row-but .donBut')
     for (let j = 0; j < buttons.length; j++){
       buttons[j].classList.toggle('kt-hidden');
     }
-  }
+  // }
  
+  let donAmt = 555;
+
   //Set the forms amount value to the value of the clicked card's data-amt attribute.
   const myForm = document.getElementById("myForm");
-  myForm.amount.value = this.dataset.amt;
+  // myForm.amount.value = this.dataset.amt;
+  // const customAmt = document.querySelector('.kt-don-cust-el input');
+  // if (this === customAmt) {
 
+  if (this.querySelector('.kt-don-cust-el input')) {// If the hovered card has an <input> element, set donAmt to the value of that element.
+    donAmt = document.querySelector('.kt-don-cust-el input').value
+    console.log('equal')
+  }
+  // console.log(document.querySelector('.kt-don-cust-el input').value)
+  // donAmt = this.dataset.amt || document.querySelector('.kt-don-cust-l input').value
+  // donAmt = 444
+  // console.log(donAmt)
+
+
+  myForm.amount.value = donAmt;
 
 
 }
