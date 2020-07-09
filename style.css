@@ -671,12 +671,15 @@ and home page slider is on the line below it. */
 
 .kt-don-cust-el {
   white-space: nowrap;
+  display: flex;
   /* margin: 0; */
 }
 .kt-don-cust-el input {
   margin: 0;
   padding: 0;
   border: 0;
+  margin-left: 2%;
+  padding-left: 2%;
 }
 .kt-don-custom p {
   margin: 0;
