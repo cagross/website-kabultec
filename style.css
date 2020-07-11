@@ -645,6 +645,10 @@ and home page slider is on the line below it. */
 .kt-don-row img {
   margin-bottom: 0;
 }
+.kt-don-row .kt-don-text {
+  padding: 25px 0;
+}
+
 /* Ensure l/r margin added via Elementor for desktop layouts is removed for mobile layouts. */
 @media screen and (max-width: 767px) {
   .kt-don-row .elementor-widget-container {
@@ -653,9 +657,7 @@ and home page slider is on the line below it. */
 }
 @media screen and (min-width: 768px) {
   .kt-don-row .kt-don-text {
-    min-height: 200px;
     padding:  25px 25px;
-    /* color: #fff; */
   }
 }
 
@@ -749,7 +751,13 @@ and home page slider is on the line below it. */
 .kt-don-row button {
   background-color: initial;
   padding: 0;
-  width: 100%;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .kt-don-row button {
+    width: 100%;
+  }
 }
 
 
