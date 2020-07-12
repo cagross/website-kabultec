@@ -657,7 +657,7 @@ and home page slider is on the line below it. */
 }
 @media screen and (min-width: 768px) {
   .kt-don-row .kt-don-text {
-    padding:  25px 25px;
+    padding:  25px 5%;
   }
 }
 
@@ -674,40 +674,38 @@ and home page slider is on the line below it. */
 .kt-don-cust-el {
   white-space: nowrap;
   display: flex;
+  justify-content: center;
   /* margin: 0; */
 }
 .kt-don-cust-el input {
   margin: 0;
   padding: 0;
-  border: 0;
+  /* border: 1px solid black; */
   margin-left: 2%;
   padding-left: 2%;
+  border: solid 1px #979797;
+  width: 75%;
+
 }
-.kt-don-custom p {
+/* .kt-don-custom p {
   margin: 0;
   font-size: 18px;
   line-height: 22px;
-}
-.kt-don-custom input {
-  margin: 0 0 0 10px;
-  padding: 0 0 0 5px;
-  height: 48px;
-  width: 75%;
-  border: solid 1px #979797;
-}
+} */
+
 @media screen and (min-width: 300px) {
-  .kt-don-custom input {
+  /* .kt-don-custom input {
     width: 50%;
-  }
+  } */
 }
 @media screen and (min-width: 767px) {
-  .kt-don-custom input {
+  /* .kt-don-custom input {
     width: 100%;
   }
   .kt-don-custom p {
     display: flex;
     justify-content: flex-end;
-  }
+  } */
 }
 .kt-don-row .elementor-image-box-wrapper {
   outline: solid 1px #979797;

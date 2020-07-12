@@ -92,11 +92,9 @@ function myFunc() {
   if (this.querySelector('.kt-don-cust-el input')) {// If the hovered card has an <input> element, set donAmt to the value of that element.
     donAmt = document.querySelector('.kt-don-cust-el input').value
     console.log('equal')
+  } else {
+    donAmt = this.dataset.amt
   }
-  // console.log(document.querySelector('.kt-don-cust-el input').value)
-  // donAmt = this.dataset.amt || document.querySelector('.kt-don-cust-l input').value
-  // donAmt = 444
-  // console.log(donAmt)
 
 
   myForm.amount.value = donAmt;

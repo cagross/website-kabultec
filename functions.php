@@ -453,7 +453,9 @@ add_filter( 'the_content', 'kt_added_page_content');
 
 // This function enqueues the JS file for the donate page.
 function kt_enqueue_script2() {
-	wp_enqueue_script( 'testy-js', '/wp-content/themes/spacious-child/assets/js/script-donate.js', array(), NULL, TRUE);
+  if (is_page('donate')) {
+    wp_enqueue_script( 'testy-js', '/wp-content/themes/spacious-child/assets/js/script-donate.js', array(), NULL, TRUE);
+  }
 }
 add_action( 'wp_enqueue_scripts', 'kt_enqueue_script2' );
 
