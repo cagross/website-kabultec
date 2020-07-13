@@ -40,6 +40,9 @@ for (var i = 0; i < myEls.length; i++){
   myEls[i].addEventListener("mouseleave", myFunc);
 }
 
+// const buttons = document.querySelectorAll('.kt-don-row-but .donBut')
+const buttons = document.querySelectorAll('.kt-don-row-but button')
+
 
 
 // function myFunc(evt) {
@@ -75,32 +78,59 @@ function myFunc() {
     // if (!donateCardElements[i].classList.contains(classHighlighted) && donateCardElements[i] !== this) {continue}
     // If this card is the card that was clicked, OR it was already highlighted, toggle the highlighted class on it, and ensure the correct button is displayed on it.
     this.classList.toggle(classHighlighted);
-    const buttons = this.querySelectorAll('.kt-don-row-but .donBut')
-    for (let j = 0; j < buttons.length; j++){
-      buttons[j].classList.toggle('kt-hidden');
+    const buttonsCard = this.querySelectorAll('.kt-don-row-but .donBut')
+    // console.log(buttonsCard)
+    for (let j = 0; j < buttonsCard.length; j++){
+      buttonsCard[j].classList.toggle('kt-hidden');
     }
   // }
  
-  let donAmt = 555;
+  
 
   //Set the forms amount value to the value of the clicked card's data-amt attribute.
-  const myForm = document.getElementById("myForm");
-  // myForm.amount.value = this.dataset.amt;
-  // const customAmt = document.querySelector('.kt-don-cust-el input');
-  // if (this === customAmt) {
-
-  if (this.querySelector('.kt-don-cust-el input')) {// If the hovered card has an <input> element, set donAmt to the value of that element.
-    donAmt = document.querySelector('.kt-don-cust-el input').value
-    console.log('equal')
-  } else {
-    donAmt = this.dataset.amt
-  }
+  
 
 
-  myForm.amount.value = donAmt;
+  // if (this.querySelector('.kt-don-cust-el input')) {// If the hovered card has an <input> element, set donAmt to the value of that element.
+  //   donAmt = document.querySelector('.kt-don-cust-el input').value
+  //   console.log('equal')
+  //   console.log(donAmt)
+
+  // } else {
+  //   donAmt = this.dataset.amt
+  // }
+  // myForm.amount.value = donAmt;
 
 
 }
+
+function testy() {
+  console.log('testy');
+  console.log(this);
+
+  // let donAmt = 555;
+  // const myForm = document.getElementById("myForm");
+
+  // if (this.querySelector('div > .donButCust')) {// If the hovered card has an <input> element, set donAmt to the value of that element.
+  //   donAmt = document.querySelector('.kt-don-cust-el input').value
+  //   console.log('equal')
+  //   console.log(donAmt)
+
+  // } else {
+  //   donAmt = this.dataset.amt
+  // }
+  // myForm.amount.value = donAmt;
+}
+for (i = 0; i < buttons.length; i++){
+  // buttons[i].onclick = testy;
+  console.log(buttons[i])
+  buttons[i].addEventListener("click", testy);
+}
+// document.querySelector('#kt-amt-cust button').onclick = testy;
+// const document.querySelectorAll('#kt-amt-cust button')
+// .onclick = testy;
+
+
 
 function calculateOrder() {
 

@@ -659,6 +659,9 @@ and home page slider is on the line below it. */
   .kt-don-row .kt-don-text {
     padding:  25px 5%;
   }
+  .kt-don-cust-el input {
+    width: 75%;
+  }
 }
 
 /* Style the custom donation row. */
@@ -684,7 +687,7 @@ and home page slider is on the line below it. */
   margin-left: 2%;
   padding-left: 2%;
   border: solid 1px #979797;
-  width: 75%;
+  width: 50%;
 
 }
 /* .kt-don-custom p {
