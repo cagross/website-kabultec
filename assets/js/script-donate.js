@@ -18,7 +18,8 @@ for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', myFunction)
 }
 function myFunction() {
-  myForm.amount.value = this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.amt
+  // myForm.amount.value = this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.amt || 555;
+  myForm.amount.value = this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.amt || this.parentElement.parentElement.querySelector('input').value;
   myForm.submit();
 }
 
@@ -46,7 +47,6 @@ for (var i = 0; i < myEls.length; i++) {
 }
 
 function myFunc() {
-
   const classHighlighted = 'kt-amt-select';
   this.classList.toggle(classHighlighted);
   const buttonsCard = this.querySelectorAll('.kt-don-row-but .donBut')
