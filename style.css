@@ -710,7 +710,8 @@ and home page slider is on the line below it. */
     justify-content: flex-end;
   } */
 }
-.kt-don-row .elementor-image-box-wrapper {
+/* .kt-don-row .elementor-image-box-wrapper { */
+.kt-don-row .elementor-widget-wrap {
   outline: solid 1px #979797;
 }
 
@@ -763,5 +764,45 @@ and home page slider is on the line below it. */
 
 
 
+/* Begin rules to ensure donate buttons are aligned. */
+.elementor-column-wrap {
+  height: 100%;
+}
+
+.elementor-column {
+  height: 100%;
+}
+
+.elementor-widget-wrap {
+  height: 100%;
+}
+
+.kt-amt {
+  height: 100%;
+}
+
+.elementor-widget-container {
+  height: 100%;
+}
+
+.elementor-image-box-wrapper {
+  height: 100%;
+}
+
+.elementor-image-box-content {
+  height: 100%;
+}
+
+.elementor-widget-image-box .elementor-image-box-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.kt-don-row .kt-don-text {
+  flex: 1;
+}
+
+/* End rules to ensure donate buttons are aligned. */
 
 /* End donate page edits. */

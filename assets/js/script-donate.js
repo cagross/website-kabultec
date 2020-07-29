@@ -42,8 +42,8 @@ function myScriptLeave() {
 const myEls = document.querySelectorAll('.kt-amt');
 
 for (var i = 0; i < myEls.length; i++) {
-  myEls[i].addEventListener("mouseenter", myFunc);
-  myEls[i].addEventListener("mouseleave", myFunc);
+  // myEls[i].addEventListener("mouseenter", myFunc);
+  // myEls[i].addEventListener("mouseleave", myFunc);
 }
 
 function myFunc() {

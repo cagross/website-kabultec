@@ -484,3 +484,17 @@ function kt_menu_button( $nav_menu ) {
 	return $nav_menu . $kt_but_markup;
 }
 add_filter( 'wp_nav_menu', 'kt_menu_button' );
+
+function add_query_string( $qvars ) {
+  $qvars[] = 'custom_query_var';
+  return $qvars;
+}
+add_filter( 'query_vars', 'add_query_string' );
+
+function print_value() {
+  $my_val = get_query_var( 'page', 555 );
+  error_log( print_r( '$my_val:', true ) );
+  error_log( print_r( $my_val, true ) );
+}
+add_action( 'init', 'print_value', 12 );
+
