@@ -765,38 +765,52 @@ and home page slider is on the line below it. */
 
 
 /* Begin rules to ensure donate buttons are aligned. */
-.elementor-column-wrap {
-  height: 100%;
-}
-
 .elementor-column {
   height: 100%;
+    display: flex;
+  flex-direction: column;
+}
+
+.elementor-column-wrap {
+  height: 100%;
+    display: flex;
+  flex-direction: column;
 }
 
 .elementor-widget-wrap {
   height: 100%;
+    display: flex;
+  flex-direction: column;
 }
 
 .kt-amt {
   height: 100%;
+    display: flex;
+  flex-direction: column;
 }
 
 .elementor-widget-container {
   height: 100%;
+    display: flex;
+  flex-direction: column;
 }
 
 .elementor-image-box-wrapper {
   height: 100%;
+    display: flex;
+  flex-direction: column;
 }
 
 .elementor-image-box-content {
   height: 100%;
+    display: flex;
+  flex-direction: column;
 }
 
 .elementor-widget-image-box .elementor-image-box-content {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  /* flex: 1; */
 }
 
 .kt-don-row .kt-don-text {

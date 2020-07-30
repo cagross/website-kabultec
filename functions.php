@@ -485,16 +485,29 @@ function kt_menu_button( $nav_menu ) {
 }
 add_filter( 'wp_nav_menu', 'kt_menu_button' );
 
-function add_query_string( $qvars ) {
-  $qvars[] = 'custom_query_var';
+/* Begin code to add custom content to Donate page for cancelled transactions. */
+
+/* Register a custom query string for Donate page URL:  'kt_cancel' */
+function kt_add_query_string( $qvars ) {
+  $qvars[] = 'kt_trans';
   return $qvars;
 }
-add_filter( 'query_vars', 'add_query_string' );
+add_filter( 'query_vars', 'kt_add_query_string' );
 
 function print_value() {
-  $my_val = get_query_var( 'page', 555 );
-  error_log( print_r( '$my_val:', true ) );
-  error_log( print_r( $my_val, true ) );
+  if (is_page('donate')) {
+    $my_val = get_query_var( 'kt_trans', 'not_set');
+    if ($my_val === 'cancel') {
+      error_log( print_r( '$my_val:', true ) );
+      error_log( print_r( $my_val, true ) );
+      error_log( print_r( gettype($my_val), true ) );
+      //Define a separate function to insert custom HTML.  Call that function here.
+    }
+  }
 }
-add_action( 'init', 'print_value', 12 );
+add_action( 'wp', 'print_value', 12 );
+/* End code to add custom content to Donate page for cancelled transactions. */
+
+
+
 
