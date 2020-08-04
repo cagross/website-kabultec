@@ -8,9 +8,8 @@
 */
 
 /* Shrinks the width of the main contact form.  This id was obtained from a view source on contact form page.  */
-#wpcf7-f4-p72-o1
-{
-    width:50%;
+#wpcf7-f4-p72-o1 {
+  width: 50%;
 }
 
 /* Shrinks settings of top 3 images so they fit on smaller laptops.*/
@@ -25,78 +24,77 @@
 
 /* Edit the description on the homepage.*/
 #text-home-desc p {
-	font-size: 1.5em;
-	line-height: 150%;
+  font-size: 1.5em;
+  line-height: 150%;
 }
-
 
 /* Creates a new class with the same style as the theme widget <h3> titles.  I then apply this class via HTML in the text widget for "About The Founder: Nasrine Gross"  This is to allow the title to be a hyperlink. */
 .widget-title-border {
-	border-bottom: 2px solid #0FBE7C;
-	padding-bottom: 5px;
+  border-bottom: 2px solid #0fbe7c;
+  padding-bottom: 5px;
 }
 
 /* Increases line height of all list entries by 50% */
 li {
-	line-height: 150%;
+  line-height: 150%;
 }
 
 /* Increases font of page/post title so it is larger than the <h2> font in the page content.*/
 h1.header-post-title-class {
-    font-size: 33px;
+  font-size: 33px;
 }
 
 .tablepress-id-1 .row-1 .column-2 {
-	font-weight: bold;
+  font-weight: bold;
 }
 .tablepress-id-1 .row-1 .column-3 {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .tablepress-id-4 .column-1 {
-	width: 65%;
+  width: 65%;
 }
 
 /* This ensures the username of the poster is not displayed on blog posts */
 .post .entry-meta span:first-child {
-    display: none;
+  display: none;
 }
 
 /* This ensures the sidebar is displayed on the blog page. */
 .blog #secondary {
-    display: block!important;
+  display: block !important;
 }
 
 /* This shrinks the text on image captions. */
 .wp-caption-text {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 /* This sets a bg color on each featured image of the blog. */
 .post-featured-image {
-    background-color:whitesmoke;
+  background-color: whitesmoke;
 }
 
 /* This adds a margin to the top of each featured image of the blog. */
 .wp-post-image {
-    margin-top:18px;
+  margin-top: 18px;
 }
 
 /* This centers the titles on blog posts displayed by plugin Ultimate Post Title. */
 .upl-post-title {
-    text-align:center;
+  text-align: center;
 }
 .upl-post-date {
-    text-align:center;
+  text-align: center;
 }
 
 /* This ensures the date at the top of each post is right aligned. */
 .post-date-top {
-    text-align:right;
+  text-align: right;
 }
 
 article .entry-content p img {
-    background-color:whitesmoke;
+  background-color: whitesmoke;
 }
 
 /* This ensures blog titles are in italics.*/
@@ -106,7 +104,7 @@ article .entry-content p img {
 
 /* This ensures the title of lists in the 'Ultimate Post List' plugin is same size as other titles.*/
 .upl-list > h3 > a {
-	font-size: 22px;
+  font-size: 22px;
 }
 
 /* These ensure the Talks/Symposia tables are formatted properly.*/
@@ -127,9 +125,9 @@ article .entry-content p img {
   font-size: 120%;
 }
 #tablepress-11 > tbody > tr > td {
-  border-style:solid;
-  border-top-style:solid;
-  border-top-width:initial;
+  border-style: solid;
+  border-top-style: solid;
+  border-top-width: initial;
 }
 
 /*This gives Talk/Symposia tables more space between entries.*/
@@ -141,7 +139,7 @@ article .entry-content p img {
 }
 
 /* Begin News and Press table here.*/
-.outer-wrapper{
+.outer-wrapper {
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgb(221, 221, 221);
@@ -150,7 +148,7 @@ article .entry-content p img {
 .box {
   display: flex;
   height: 100px;
-  width:100%;
+  width: 100%;
   align-items: center;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -158,21 +156,21 @@ article .entry-content p img {
 
 .box-logo {
   height: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   flex: 0 1 25%;
   justify-content: center;
 }
 
 .logo-ma-print {
-  width:140px;
-  min-width:0;
+  width: 140px;
+  min-width: 0;
 }
 
 .logo-ma-text {
   padding-left: 10px;
   padding-right: 10px;
-  min-width:0;
+  min-width: 0;
   text-align: center;
 }
 
@@ -181,26 +179,26 @@ article .entry-content p img {
 }
 
 .logo-ma {
-  width:100px;
-  min-width:0;
+  width: 100px;
+  min-width: 0;
 }
 
 .logos-row-wrapper {
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.side-header{
+.side-header {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  width:75px;
+  width: 75px;
   line-height: 75px;
   text-align: center;
 }
 
-.side-header-single{
-  margin-bottom:0;
+.side-header-single {
+  margin-bottom: 0;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -208,7 +206,7 @@ article .entry-content p img {
 .logo-wrap {
   width: 75%;
   height: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -218,17 +216,23 @@ article .entry-content p img {
   top: 0;
   position: relative;
   transition: top;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 .logo-wrap:hover .wobble {
-  animation: wobble 1.0s infinite ease-out;
+  animation: wobble 1s infinite ease-out;
   top: -20px;
 }
-@keyframes wobble  {
-  0%    { transform:  rotate(-10deg); }
-  50%   { transform:  rotate(10deg); }
-  100%  { transform:  rotate(-10deg); }
+@keyframes wobble {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
 }
 
 /*Reduce font on text wobble elements so text does not wrap.*/
@@ -241,7 +245,7 @@ article .entry-content p img {
   .logo-wrap {
     width: 90%;
     height: 100%;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -254,21 +258,22 @@ article .entry-content p img {
 }
 /*On smaller screens, change layout of 'News and Press' page to single column.*/
 @media screen and (max-width: 540px) {
-  .outer-wrapper{
-    display: inherit; 
-    align-items: inherit; 
+  .outer-wrapper {
+    display: inherit;
+    align-items: inherit;
   }
   .box {
-    height: inherit; 
-    justify-content: inherit; 
-    padding-bottom: inherit; 
-    flex-direction:column;
+    height: inherit;
+    justify-content: inherit;
+    padding-bottom: inherit;
+    flex-direction: column;
   }
-  .box-logo {/*Ensure text wobble elements do not wrap to second line.*/
-    width:200px;
+  .box-logo {
+    /*Ensure text wobble elements do not wrap to second line.*/
+    width: 200px;
   }
   .box-tv {
-    height:inherit; 
+    height: inherit;
   }
   /*Increase vertical margin between text wobble elements.*/
   .logo-ma {
@@ -281,28 +286,31 @@ article .entry-content p img {
     margin: 20px 0 20px 0;
   }
   .logos-row-wrapper {
-    width:inherit; 
+    width: inherit;
   }
-  .side-header{
-    writing-mode: inherit; 
-    text-orientation: inherit; 
-    width:inherit;
+  .side-header {
+    writing-mode: inherit;
+    text-orientation: inherit;
+    width: inherit;
     line-height: inherit;
     font-size: 20px;
     font-weight: bold;
     text-decoration: underline;
   }
-  .side-header-single{
-    margin-bottom:0;
+  .side-header-single {
+    margin-bottom: 0;
     padding-top: 8px;
     padding-bottom: 8px;
   }
-  .logo-ma-text a {/*Reset font size on text wobble elements to initial size.*/
+  .logo-ma-text a {
+    /*Reset font size on text wobble elements to initial size.*/
     font-size: initial;
   }
 }
 /*Fix 'News and Press' layout for IE mobile screens.*/
-@media screen and (max-width: 540px), screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media screen and (max-width: 540px),
+  screen and (-ms-high-contrast: active),
+  screen and (-ms-high-contrast: none) {
   .box-logo {
     flex: inherit;
   }
@@ -310,7 +318,7 @@ article .entry-content p img {
 /* End News and Press CSS. */
 
 /*Ensures mouse pointer on Donate page changes accordingly.*/
-input[type=image]{
+input[type="image"] {
   cursor: pointer;
 }
 
@@ -343,298 +351,291 @@ input[type=image]{
 
 /* Begin header edits. */
 :root {
-	--head-mob-lr-margin: 3vw;
-	--head-pad-top: 3.911vw;
+  --head-mob-lr-margin: 3vw;
+  --head-pad-top: 3.911vw;
 }
 
 /* Begin mobile header edits.*/
 
 /* Style the donate button. */
 .kt-don-but {
-	background-color: #ad2e36;
-	text-transform: uppercase;
-	border-radius: 30px;
-	font-weight: 900;
-	letter-spacing: 3px;
-	margin-bottom: 0;
-	width: 100%;
-	font-size: 10px;
-	height: 25px;
+  background-color: #ad2e36;
+  text-transform: uppercase;
+  border-radius: 30px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 10px;
+  height: 25px;
 }
 
 #menu-main-menu {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #menu-main-menu > li {
-	line-height: 200%;
+  line-height: 200%;
 }
 
 /* Ensure menu font is identical to design, and scales linearly
 at lower screen widths, so everything fits inside its container. */
 #menu-main-menu > li > a {
-	letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
 }
 
 /* Hide full text on donate button at mobile screen widths.*/
 .kt-full-text {
-	display: none;
+  display: none;
 }
 
 /* Ensure logo, donate button, and nav menu are on the same line,
 and home page slider is on the line below it. */
 #masthead {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 /* Ensure logo resizes to fill extra space on the line. */
 #masthead > a {
-	flex: 1 1 0;
+  flex: 1 1 0;
 }
 
 #featured-slider {
-	flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 /* Ensure donate button appears before nav menu. */
 #site-navigation {
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	padding-top: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-top: 0;
 }
 
 .better-responsive-menu .site-header .menu-toggle::before {
-	font-size: 75px;
+  font-size: 75px;
 }
 
 @media screen and (min-width: 301px) {
+  #menu-main-menu > li {
+    line-height: calc((28px + ((767px * 4) / 467) - (400vw / 467)));
+  }
 
-	#menu-main-menu > li {
-		line-height: calc((28px + ((767px * 4) / 467) - (400vw / 467)));
-	}
-
-	.better-responsive-menu .site-header .menu-toggle {
-
-		/* Width of menu container is 80 px @ screen width 767 px and 40 px @ screen
+  .better-responsive-menu .site-header .menu-toggle {
+    /* Width of menu container is 80 px @ screen width 767 px and 40 px @ screen
 		width 300 px and below. */
-		width: calc(4000vw / 467 + (80px - ((767px * 40) / 467)));
-	}
+    width: calc(4000vw / 467 + (80px - ((767px * 40) / 467)));
+  }
 
-	.better-responsive-menu .site-header .menu-toggle::before {
-		font-size: calc(6500vw / 467 + (140px - ((767px * 65) / 467)));
-	}
+  .better-responsive-menu .site-header .menu-toggle::before {
+    font-size: calc(6500vw / 467 + (140px - ((767px * 65) / 467)));
+  }
 
-	.kt-don-but {
-
-		/* Font size is 20 px @ screen width 767 px and 10 px @ screen width 300 px
+  .kt-don-but {
+    /* Font size is 20 px @ screen width 767 px and 10 px @ screen width 300 px
 		and below. */
-		font-size: calc(100vw / 46.7 + (20px - (767px / 46.7) ));
+    font-size: calc(100vw / 46.7 + (20px - (767px / 46.7)));
 
-		/* Letter spacing is 5 px @ screen width 767 px and 3 px @ screen width 300 px
+    /* Letter spacing is 5 px @ screen width 767 px and 3 px @ screen width 300 px
 		and below. */
-		letter-spacing: calc(200vw / 467 + (5px - ((767px * 2) / 467) ));
+    letter-spacing: calc(200vw / 467 + (5px - ((767px * 2) / 467)));
 
-		/* Height is 60 px @ screen width 767 px and 25px @ 300 px and below. */
-		height: calc(4500vw / 467 + (70px - ((767px * 45) / 467) ));
-
-	}
+    /* Height is 60 px @ screen width 767 px and 25px @ 300 px and below. */
+    height: calc(4500vw / 467 + (70px - ((767px * 45) / 467)));
+  }
 }
 
 @media screen and (min-width: 769px) {
-
-	/* Font size scales linearly with screen width, from 15px (@900px width) to
+  /* Font size scales linearly with screen width, from 15px (@900px width) to
 	12.5px (768px width)*/
-	#menu-main-menu > li > a,
-	.kt-don-but {
-		font-size: calc((1vw / 0.528) - 2.0454545px);
-	}
+  #menu-main-menu > li > a,
+  .kt-don-but {
+    font-size: calc((1vw / 0.528) - 2.0454545px);
+  }
 
-	/* At desktop screen widths, hide short text and show full text */
-	.kt-full-text {
-		display: inline-block;
-	}
+  /* At desktop screen widths, hide short text and show full text */
+  .kt-full-text {
+    display: inline-block;
+  }
 
-	.kt-short-text {
-		display: none;
-	}
+  .kt-short-text {
+    display: none;
+  }
 
-	#menu-main-menu > li {
-		line-height: inherit;
-	}
+  #menu-main-menu > li {
+    line-height: inherit;
+  }
 
-	.better-responsive-menu .site-header .menu-toggle {
-		width: initial;
-	}
+  .better-responsive-menu .site-header .menu-toggle {
+    width: initial;
+  }
 
-	.better-responsive-menu .site-header .menu-toggle::before {
-		font-size: initial;
-	}
+  .better-responsive-menu .site-header .menu-toggle::before {
+    font-size: initial;
+  }
 
-	/* Ensure no wrapping of main menu occurs. */
-	#menu-main-menu {
-		display: flex;
-		letter-spacing: 1.08px;
-	}
+  /* Ensure no wrapping of main menu occurs. */
+  #menu-main-menu {
+    display: flex;
+    letter-spacing: 1.08px;
+  }
 
-	#menu-main-menu > li > a {
-		white-space: nowrap;
-	}
+  #menu-main-menu > li > a {
+    white-space: nowrap;
+  }
 
-	.menu-primary-container {
-		margin-right: 10px;
-	}
+  .menu-primary-container {
+    margin-right: 10px;
+  }
 
-	/* Remove mobile edits to logo, donate button, nav menu, and slider.*/
-	#masthead {
-		display: initial;
-		flex-wrap: initial;
-		justify-content: initial;
-	}
+  /* Remove mobile edits to logo, donate button, nav menu, and slider.*/
+  #masthead {
+    display: initial;
+    flex-wrap: initial;
+    justify-content: initial;
+  }
 
-	#masthead > a {
-		flex: initial;
-	}
+  #masthead > a {
+    flex: initial;
+  }
 
-	#featured-slider {
-		flex-basis: initial;
-	}
+  #featured-slider {
+    flex-basis: initial;
+  }
 
-	/*Ensures header image on home page is the size I want (150px),
+  /*Ensures header image on home page is the size I want (150px),
 	instead of full width.*/
-	.header-image {
-		display: block;
-		height: 150px;
-		margin: 0 auto;
-		width: auto;
-	}
+  .header-image {
+    display: block;
+    height: 150px;
+    margin: 0 auto;
+    width: auto;
+  }
 
-	/* Ensure first menu item has no left margin. */
-	#menu-main-menu > li:first-child {
-		margin-left: 0;
-	}
+  /* Ensure first menu item has no left margin. */
+  #menu-main-menu > li:first-child {
+    margin-left: 0;
+  }
 
-	/* Add these to use flex to push last menu item to the far right.*/
-	#header-right-section {
-		float: none;
-	}
+  /* Add these to use flex to push last menu item to the far right.*/
+  #header-right-section {
+    float: none;
+  }
 
-	#site-navigation {
-		float: none;
-		flex-direction: row;
-	}
+  #site-navigation {
+    float: none;
+    flex-direction: row;
+  }
 
-	#site-navigation li {
-		float: none;
-		display: inline-block;
-	}
+  #site-navigation li {
+    float: none;
+    display: inline-block;
+  }
 
-	.kt-don-but {
-		height: 45px;
-		letter-spacing: 3px;
+  .kt-don-but {
+    height: 45px;
+    letter-spacing: 3px;
 
-		/* Left/right padding scales linearly with screen width,
+    /* Left/right padding scales linearly with screen width,
 		from 25px (@900px width) to 5px (768px width)*/
-		padding-left: calc((1vw / 0.066) - 111.363636px);
-		padding-right: calc((1vw / 0.066) - 111.363636px);
-	}
+    padding-left: calc((1vw / 0.066) - 111.363636px);
+    padding-right: calc((1vw / 0.066) - 111.363636px);
+  }
 
-	.kt-don-menu {
-		margin-left: auto;
-		width: 220px;
-		flex: 0 1 auto;
-	}
+  .kt-don-menu {
+    margin-left: auto;
+    width: 220px;
+    flex: 0 1 auto;
+  }
 }
 
 @media screen and (min-width: 900px) {
+  #menu-main-menu li > a,
+  .kt-don-but {
+    font-size: 15px;
+  }
 
-	#menu-main-menu li > a,
-	.kt-don-but {
-		font-size: 15px;
-	}
-
-	.kt-don-but {
-		padding: initial;
-	}
+  .kt-don-but {
+    padding: initial;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .header-image {
+    border: none;
+  }
 
-	.header-image {
-		border: none;
-	}
-
-	/* Ensure that at screen width 600 px, the header doesn't automatically obtain
+  /* Ensure that at screen width 600 px, the header doesn't automatically obtain
 	extra top padding/margin. */
-	#header-left-section {
-		display: none;
-	}
+  #header-left-section {
+    display: none;
+  }
 
-	/* Ensure opening hamburger menu does not add padding to header elements. */
-	.main-small-navigation a.kt-don-menu {
-		padding: 0;
-	}
+  /* Ensure opening hamburger menu does not add padding to header elements. */
+  .main-small-navigation a.kt-don-menu {
+    padding: 0;
+  }
 
-	.inner-wrap {
-		width: 100%;
-	}
+  .inner-wrap {
+    width: 100%;
+  }
 
-	.better-responsive-menu #header-text-nav-container {
-		margin-bottom: 0;
-	}
+  .better-responsive-menu #header-text-nav-container {
+    margin-bottom: 0;
+  }
 
-	.better-responsive-menu #header-right-section {
-		padding: 0;
-		margin: 0;
-	}
+  .better-responsive-menu #header-right-section {
+    padding: 0;
+    margin: 0;
+  }
 
-	.better-responsive-menu #site-navigation {
-		margin-top: 0;
-	}
+  .better-responsive-menu #site-navigation {
+    margin-top: 0;
+  }
 
-	/* Set font-size of hamburger menu. */
-	.better-responsive-menu .site-header .menu-toggle {
-		color: #000;
-		background-color: #fff;
-	}
+  /* Set font-size of hamburger menu. */
+  .better-responsive-menu .site-header .menu-toggle {
+    color: #000;
+    background-color: #fff;
+  }
 
-	/* Ensure mobile menu is wide enough.*/
-	.better-responsive-menu #site-navigation .menu-primary-container {
-		width: 150%;
-		left: -50%;
-	}
+  /* Ensure mobile menu is wide enough.*/
+  .better-responsive-menu #site-navigation .menu-primary-container {
+    width: 150%;
+    left: -50%;
+  }
 
-	#masthead > a {
-		margin-left: var(--head-mob-lr-margin);
-		margin-right: 6vw;
-	}
+  #masthead > a {
+    margin-left: var(--head-mob-lr-margin);
+    margin-right: 6vw;
+  }
 
-	#header-text-nav-container {
-		margin-right: var(--head-mob-lr-margin);
-		top: calc(-500vw / 467 + ( ( 767px * 5 ) / 467 ));
-	}
+  #header-text-nav-container {
+    margin-right: var(--head-mob-lr-margin);
+    top: calc(-500vw / 467 + ((767px * 5) / 467));
+  }
 
-	.kt-don-menu {
-		margin-right: 2vw;
-	}
+  .kt-don-menu {
+    margin-right: 2vw;
+  }
 
-	/* Set top padding to be 30 px @ screen width 767 px. */
-	#masthead {
-		padding-top: var(--head-pad-top);
-	}
+  /* Set top padding to be 30 px @ screen width 767 px. */
+  #masthead {
+    padding-top: var(--head-pad-top);
+  }
 
-	/* Set bottom padding to be 5/3 of top padding. */
-	#masthead > a,
-	#header-text-nav-container {
-		padding-bottom: calc(5 * var(--head-pad-top) / 3);
-	}
+  /* Set bottom padding to be 5/3 of top padding. */
+  #masthead > a,
+  #header-text-nav-container {
+    padding-bottom: calc(5 * var(--head-pad-top) / 3);
+  }
 
-	.kt-don-but {
-		border-radius: 50px;
-	}
+  .kt-don-but {
+    border-radius: 50px;
+  }
 }
 
 /* End header edits. */
@@ -657,7 +658,7 @@ and home page slider is on the line below it. */
 }
 @media screen and (min-width: 768px) {
   .kt-don-row .kt-don-text {
-    padding:  25px 5%;
+    padding: 25px 5%;
   }
   .kt-don-cust-el input {
     width: 75%;
@@ -688,7 +689,6 @@ and home page slider is on the line below it. */
   padding-left: 2%;
   border: solid 1px #979797;
   width: 50%;
-
 }
 /* .kt-don-custom p {
   margin: 0;
@@ -727,13 +727,9 @@ and home page slider is on the line below it. */
   color: #fff;
 }
 
-
-
 .donBut {
   height: auto;
-  /* width: 90%; */
   width: 100%;
-
   margin-bottom: 20px;
 }
 .kt-button-cont {
@@ -762,55 +758,53 @@ and home page slider is on the line below it. */
   }
 }
 
-
-
 /* Begin rules to ensure donate buttons are aligned. */
 .elementor-column {
   height: 100%;
-    display: flex;
+  display: flex;
   flex-direction: column;
 }
 
 .elementor-column-wrap {
   height: 100%;
-    display: flex;
+  display: flex;
   flex-direction: column;
 }
 
 .elementor-widget-wrap {
   height: 100%;
-    display: flex;
+  display: flex;
   flex-direction: column;
 }
 
 .kt-amt {
   height: 100%;
-    display: flex;
+  display: flex;
   flex-direction: column;
 }
 
 .elementor-widget-container {
   height: 100%;
-    display: flex;
+  display: flex;
   flex-direction: column;
 }
 
 .elementor-image-box-wrapper {
   height: 100%;
-    display: flex;
+  display: flex;
   flex-direction: column;
 }
 
 .elementor-image-box-content {
-  height: 100%;
-    display: flex;
-  flex-direction: column;
+  /* height: 100%;
+  display: flex;
+  flex-direction: column; */
 }
 
 .elementor-widget-image-box .elementor-image-box-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  /* flex: 1; */
 }
 
 .kt-don-row .kt-don-text {
