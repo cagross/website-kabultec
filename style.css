@@ -642,6 +642,12 @@ and home page slider is on the line below it. */
 
 /* Begin donate page edits. */
 
+:root {
+  --don-height: 100%;
+  --don-display: flex;
+  --don-flex-direction: column;
+}
+
 /* Style the preset donation row. */
 .kt-don-row img {
   margin-bottom: 0;
@@ -657,12 +663,12 @@ and home page slider is on the line below it. */
   }
 }
 @media screen and (min-width: 768px) {
-  .kt-don-row .kt-don-text {
+  /* .kt-don-row .kt-don-text {
     padding: 25px 5%;
   }
   .kt-don-cust-el input {
     width: 75%;
-  }
+  } */
 }
 
 /* Style the custom donation row. */
@@ -672,45 +678,22 @@ and home page slider is on the line below it. */
   line-height: 30px;
   margin-bottom: 20px;
   color: #529745;
-  /* height: 35px; */
 }
 
 .kt-don-cust-el {
   white-space: nowrap;
   display: flex;
   justify-content: center;
-  /* margin: 0; */
 }
 .kt-don-cust-el input {
   margin: 0;
   padding: 0;
-  /* border: 1px solid black; */
   margin-left: 2%;
   padding-left: 2%;
   border: solid 1px #979797;
   width: 50%;
 }
-/* .kt-don-custom p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 22px;
-} */
 
-@media screen and (min-width: 300px) {
-  /* .kt-don-custom input {
-    width: 50%;
-  } */
-}
-@media screen and (min-width: 767px) {
-  /* .kt-don-custom input {
-    width: 100%;
-  }
-  .kt-don-custom p {
-    display: flex;
-    justify-content: flex-end;
-  } */
-}
-/* .kt-don-row .elementor-image-box-wrapper { */
 .kt-don-row .elementor-widget-wrap {
   outline: solid 1px #979797;
 }
@@ -720,7 +703,6 @@ and home page slider is on the line below it. */
 }
 .kt-amt-select .elementor-image-box-content {
   background: #ad2e36;
-  /* background: #529745; */
   color: #fff;
 }
 .kt-amt-select .kt-don-amt {
@@ -745,7 +727,6 @@ and home page slider is on the line below it. */
   display: none;
 }
 
-/* #myForm button { */
 .kt-don-row button {
   background-color: initial;
   padding: 0;
@@ -756,59 +737,60 @@ and home page slider is on the line below it. */
   .kt-don-row button {
     width: 100%;
   }
-}
 
-/* Begin rules to ensure donate buttons are aligned. */
-.elementor-column {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  .kt-don-row .kt-don-text {
+    padding: 25px 5%;
+  }
+  .kt-don-cust-el input {
+    width: 75%;
+  }
 
-.elementor-column-wrap {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  /* Begin rules to ensure donate buttons are aligned. */
+  .kt-don-row .elementor-column {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-.elementor-widget-wrap {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  .kt-don-row .elementor-column-wrap {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-.kt-amt {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  .kt-don-row .elementor-widget-wrap {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-.elementor-widget-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  .kt-amt {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-.elementor-image-box-wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  .kt-don-row .kt-amt .elementor-widget-container {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-.elementor-image-box-content {
-  /* height: 100%;
-  display: flex;
-  flex-direction: column; */
-}
+  .kt-don-row .kt-amt .elementor-image-box-wrapper {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-.elementor-widget-image-box .elementor-image-box-content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  .kt-don-row .elementor-widget-image-box .elementor-image-box-content {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-.kt-don-row .kt-don-text {
-  flex: 1;
+  .kt-don-row .kt-don-text {
+    flex: 1;
+  }
 }
 
 /* End rules to ensure donate buttons are aligned. */
