@@ -642,10 +642,14 @@ and home page slider is on the line below it. */
 
 /* Begin donate page edits. */
 
-:root {
+/* Set custom properties.*/
+.kt-don-row {
   --don-height: 100%;
   --don-display: flex;
   --don-flex-direction: column;
+  --don-text-padding-tb: 25px;
+  --don-text-padding-lr: 0;
+  --don-text-padding-lr-dt: 5%;
 }
 
 /* Style the preset donation row. */
@@ -653,7 +657,7 @@ and home page slider is on the line below it. */
   margin-bottom: 0;
 }
 .kt-don-row .kt-don-text {
-  padding: 25px 0;
+  padding: var(--don-text-padding-tb) var(--don-text-padding-lr);
 }
 
 /* Ensure l/r margin added via Elementor for desktop layouts is removed for mobile layouts. */
@@ -661,14 +665,6 @@ and home page slider is on the line below it. */
   .kt-don-row .elementor-widget-container {
     margin: 0 !important;
   }
-}
-@media screen and (min-width: 768px) {
-  /* .kt-don-row .kt-don-text {
-    padding: 25px 5%;
-  }
-  .kt-don-cust-el input {
-    width: 75%;
-  } */
 }
 
 /* Style the custom donation row. */
@@ -708,11 +704,9 @@ and home page slider is on the line below it. */
 .kt-amt-select .kt-don-amt {
   color: #fff;
 }
-
-.donBut {
+.kt-don-but-img {
   height: auto;
   width: 100%;
-  margin-bottom: 20px;
 }
 .kt-button-cont {
   width: 90%;
@@ -739,7 +733,8 @@ and home page slider is on the line below it. */
   }
 
   .kt-don-row .kt-don-text {
-    padding: 25px 5%;
+    padding-left: var(--don-text-padding-lr-dt);
+    padding-right: var(--don-text-padding-lr-dt);
   }
   .kt-don-cust-el input {
     width: 75%;

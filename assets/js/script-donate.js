@@ -53,7 +53,9 @@ for (var i = 0; i < myEls.length; i++) {
 function myFunc() {
   const classHighlighted = "kt-amt-select";
   this.classList.toggle(classHighlighted);
-  const buttonsCard = this.querySelectorAll(".kt-don-row-but .donBut");
+  // const buttonsCard = this.querySelectorAll(".kt-don-row-but .donBut");
+  const buttonsCard = this.querySelectorAll(".kt-don-row-but .kt-don-but-img");
+
   for (let j = 0; j < buttonsCard.length; j++) {
     buttonsCard[j].classList.toggle("kt-hidden");
   }
