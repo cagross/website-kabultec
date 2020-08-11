@@ -17,13 +17,51 @@ const buttons = document.querySelectorAll(".kt-don-row-but button");
 for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", myFunction);
 }
+// function myFunction() {
+//   myForm.amount.value =
+//     this.parentElement.parentElement.parentElement.parentElement.parentElement
+//       .dataset.amt ||
+//     this.parentElement.parentElement.querySelector("input").value;
+//   myForm.submit();
+// }
+
+const nameInput = document.querySelector(".kt-don-cust-el input");
+
+// const form = document.querySelector('form');
+
+//Add onclick to button which submits the form.
+// const buttons = document.querySelectorAll("button");
+// for (i = 0; i < buttons.length; i++) {
+//   buttons[i].addEventListener("click", checkValid);
+// }
+
+//Add constraint validation API code to validate <input> field on form submission.
+nameInput.addEventListener("input", () => {
+  nameInput.setCustomValidity("");
+  nameInput.checkValidity();
+});
+
+nameInput.addEventListener("invalid", () => {
+  if (nameInput.value === "") {
+    nameInput.setCustomValidity("This field cannot be blank.");
+  } else {
+    // nameInput.setCustomValidity(
+    //   "Usernames can only contain upper and lowercase letters. Try again!"
+    // );
+  }
+});
 function myFunction() {
-  // myForm.amount.value = this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.amt || 555;
-  myForm.amount.value =
-    this.parentElement.parentElement.parentElement.parentElement.parentElement
-      .dataset.amt ||
-    this.parentElement.parentElement.querySelector("input").value;
-  myForm.submit();
+  const buttCustom = document.querySelector("#kt-amt-cust button");
+
+  if (this !== buttCustom || (this === buttCustom && nameInput.checkValidity())) {
+    myForm.amount.value =
+      this.parentElement.parentElement.parentElement.parentElement.parentElement
+        .dataset.amt ||
+      this.parentElement.parentElement.querySelector("input").value;
+    myForm.submit();
+  } else {
+    myForm.reportValidity();
+  }
 }
 
 /* Begin code governing on-hover effect of donation cards. */
@@ -53,7 +91,6 @@ for (var i = 0; i < myEls.length; i++) {
 function myFunc() {
   const classHighlighted = "kt-amt-select";
   this.classList.toggle(classHighlighted);
-  // const buttonsCard = this.querySelectorAll(".kt-don-row-but .donBut");
   const buttonsCard = this.querySelectorAll(".kt-don-row-but .kt-don-but-img");
 
   for (let j = 0; j < buttonsCard.length; j++) {
@@ -61,3 +98,5 @@ function myFunc() {
   }
 }
 /* End code governing on-hover effect of donation cards. */
+
+// const nameInput = document.querySelector("input");
