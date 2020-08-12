@@ -37,22 +37,28 @@ const nameInput = document.querySelector(".kt-don-cust-el input");
 
 //Add constraint validation API code to validate <input> field on form submission.
 nameInput.addEventListener("input", () => {
-  nameInput.setCustomValidity("");
-  nameInput.checkValidity();
+  // nameInput.setCustomValidity("");
+  // nameInput.checkValidity();
 });
 
-nameInput.addEventListener("invalid", () => {
-  if (nameInput.value === "") {
-    nameInput.setCustomValidity("This field cannot be blank.");
-  } else {
-    // nameInput.setCustomValidity(
-    //   "Usernames can only contain upper and lowercase letters. Try again!"
-    // );
+// nameInput.addEventListener("invalid", () => {
+nameInput.addEventListener("invalid", (e) => {
+
+  const el = e.target;
+  console.log(el);
+  console.log(el.validity);
+  if (el.validity.valueMissing) {
+    el.setCustomValidity("This field cannot be blank.");
+  }
+  if (el.validity.rangeUnderflow) {
+    el.setCustomValidity("Please enter a value greater than or equal to $1.00.");
   }
 });
 function myFunction() {
-  const buttCustom = document.querySelector("#kt-amt-cust button");
+  console.log('555');
 
+  const buttCustom = document.querySelector("#kt-amt-cust button");
+  if (this === buttCustom) nameInput.setCustomValidity("");
   if (this !== buttCustom || (this === buttCustom && nameInput.checkValidity())) {
     myForm.amount.value =
       this.parentElement.parentElement.parentElement.parentElement.parentElement
