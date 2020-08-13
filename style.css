@@ -650,6 +650,7 @@ and home page slider is on the line below it. */
   --don-text-padding-tb: 25px;
   --don-text-padding-lr: 0;
   --don-text-padding-lr-dt: 5%;
+  --don-amount-font-size: 40px;
 }
 
 /* Style the preset donation row. */
@@ -669,10 +670,11 @@ and home page slider is on the line below it. */
 
 /* Style the custom donation row. */
 .kt-don-amt {
-  font-size: 40px;
+  font-size: var(--don-amount-font-size);
   font-weight: 900;
-  line-height: 30px;
-  margin-bottom: 20px;
+  /* line-height: 30px; */
+  line-height: calc(var(--don-amount-font-size) * 3/4);
+  margin-bottom: 0.5em;
   color: #529745;
 }
 
