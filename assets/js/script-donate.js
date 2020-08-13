@@ -1,6 +1,6 @@
 "use strict";
 
-/* Set the value of the data-amt attribute on each donation card.  Used by <form> to insert the donation amount upon submission. */
+/* Set the value of the data-amt attribute on each donation card.*/
 const amounts = [];
 amounts["a"] = 10;
 amounts["b"] = 50;
@@ -17,33 +17,11 @@ const buttons = document.querySelectorAll(".kt-don-row-but button");
 for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", myFunction);
 }
-// function myFunction() {
-//   myForm.amount.value =
-//     this.parentElement.parentElement.parentElement.parentElement.parentElement
-//       .dataset.amt ||
-//     this.parentElement.parentElement.querySelector("input").value;
-//   myForm.submit();
-// }
 
 const nameInput = document.querySelector(".kt-don-cust-el input");
 
-// const form = document.querySelector('form');
-
-//Add onclick to button which submits the form.
-// const buttons = document.querySelectorAll("button");
-// for (i = 0; i < buttons.length; i++) {
-//   buttons[i].addEventListener("click", checkValid);
-// }
-
 //Add constraint validation API code to validate <input> field on form submission.
-nameInput.addEventListener("input", () => {
-  // nameInput.setCustomValidity("");
-  // nameInput.checkValidity();
-});
-
-// nameInput.addEventListener("invalid", () => {
 nameInput.addEventListener("invalid", (e) => {
-
   const el = e.target;
   console.log(el);
   console.log(el.validity);
@@ -55,8 +33,6 @@ nameInput.addEventListener("invalid", (e) => {
   }
 });
 function myFunction() {
-  console.log('555');
-
   const buttCustom = document.querySelector("#kt-amt-cust button");
   if (this === buttCustom) nameInput.setCustomValidity("");
   if (this !== buttCustom || (this === buttCustom && nameInput.checkValidity())) {
@@ -104,5 +80,3 @@ function myFunc() {
   }
 }
 /* End code governing on-hover effect of donation cards. */
-
-// const nameInput = document.querySelector("input");

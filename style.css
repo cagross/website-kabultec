@@ -647,10 +647,10 @@ and home page slider is on the line below it. */
   --don-height: 100%;
   --don-display: flex;
   --don-flex-direction: column;
-  --don-text-padding-tb: 25px;
+  --don-text-padding-tb: 10%;
   --don-text-padding-lr: 0;
   --don-text-padding-lr-dt: 5%;
-  --don-amount-font-size: 40px;
+  --don-amount-font-size: calc(16px * 40/16);
 }
 
 /* Style the preset donation row. */
@@ -789,7 +789,5 @@ and home page slider is on the line below it. */
     flex: 1;
   }
 }
-
 /* End rules to ensure donate buttons are aligned. */
-
 /* End donate page edits. */
