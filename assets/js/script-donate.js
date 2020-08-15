@@ -1,9 +1,10 @@
 "use strict";
 {
+  let i;
   const amounts = [];
-  amounts["a"] = 10;
-  amounts["b"] = 50;
-  amounts["c"] = 100;
+  amounts.a = 10;
+  amounts.b = 50;
+  amounts.c = 100;
 
   const donForm = document.getElementById("myForm");
   const buttons = document.querySelectorAll(".kt-don-row-but button");
@@ -12,7 +13,7 @@
   const donCards = document.querySelectorAll(".kt-amt");
 
   // Set the value of the data-amt attribute on each donation card.
-  for (let key in amounts) {
+  for (const key in amounts) {
     const amtId = `kt-amt-${key}`;// Note that in the HTML markup, the ID on each donation card must start with `kt-amt-` and end with the donation amount of that specific card (e.g. 10, 50, etc).
     const amtEl = document.getElementById(amtId);
     amtEl.setAttribute("data-amt", `${amounts[key]}`);
@@ -53,7 +54,7 @@
   }
 
   /* Begin code governing on-hover effect of donation cards. */
-  for (var i = 0; i < donCards.length; i++) {
+  for (i = 0; i < donCards.length; i++) {
     donCards[i].addEventListener("mouseenter", toggleHover);
     donCards[i].addEventListener("mouseleave", toggleHover);
   }
@@ -69,20 +70,3 @@
   }
   /* End code governing on-hover effect of donation cards. */
 }
-
-
-  // function myScript() {
-  //   this.classList.toggle("kt-amt-select");
-  // }
-
-  // function myScriptEnter() {
-  //   this.classList.toggle("kt-amt-select");
-  //   document.getElementsByClassName("donBut")[0].src =
-  //     "/wp-content/uploads/2020/06/Donate-Button-outline-white.png";
-  // }
-
-  // function myScriptLeave() {
-  //   this.classList.toggle("kt-amt-select");
-  //   document.getElementsByClassName("donBut")[0].src =
-  //     "/wp-content/uploads/2020/06/Donate-Button-outline-black.png";
-  // }
