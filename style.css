@@ -644,18 +644,18 @@ and home page slider is on the line below it. */
 
 /* Set custom properties.*/
 .kt-don-row {
-	--don-height: 100%;
-	--don-display: flex;
-	--don-flex-direction: column;
-	--don-text-padding-tb: 10%;
-	--don-text-padding-lr: 0;
-	--don-text-padding-lr-dt: 5%;
-	--don-amount-font-size: calc(16px * 40 / 16);
+  --don-height: 100%;
+  --don-display: flex;
+  --don-flex-direction: column;
+  --don-text-padding-tb: 10%;
+  --don-text-padding-lr: 0;
+  --don-text-padding-lr-dt: 5%;
+  --don-amount-font-size: calc(16px * 40 / 16);
 }
 
 /* Style the preset donation row. */
 .kt-don-row img {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .kt-don-row .kt-don-text {
@@ -666,139 +666,127 @@ and home page slider is on the line below it. */
 /* Ensure l/r margin added via Elementor for desktop layouts is removed
 for mobile layouts.*/
 @media screen and (max-width: 767px) {
-
-	.kt-don-row .elementor-widget-container {
-		margin: 0 !important;
-	}
+  .kt-don-row .elementor-widget-container {
+    margin: 0 !important;
+  }
 }
 
 /* Style the custom donation row. */
 .kt-don-amt {
-	font-size: var(--don-amount-font-size);
-	font-weight: 900;
-	line-height: calc(var(--don-amount-font-size) * 3 / 4);
-	margin-bottom: 0.5em;
-	color: #529745;
+  font-size: var(--don-amount-font-size);
+  font-weight: 900;
+  line-height: calc(var(--don-amount-font-size) * 3 / 4);
+  margin-bottom: 0.5em;
+  color: #529745;
 }
 
 .kt-don-cust-el {
-	white-space: nowrap;
-	display: flex;
-	justify-content: center;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
 }
 
 .kt-don-cust-el input {
-	margin: 0;
-	padding: 0;
-	margin-left: 2%;
-	padding-left: 2%;
-	border: solid 1px #979797;
-	width: 50%;
+  margin: 0;
+  padding: 0;
+  margin-left: 2%;
+  padding-left: 2%;
+  border: solid 1px #979797;
+  width: 50%;
 }
 
 .kt-don-row .elementor-widget-wrap {
-	outline: solid 1px #979797;
+  outline: solid 1px #979797;
 }
 
 .kt-amt-select .elementor-widget-container {
-	outline: solid 5px #529745;
+  outline: solid 5px #529745;
 }
 
 .kt-amt-select .elementor-image-box-content {
-	background: #ad2e36;
-	color: #fff;
+  background: #ad2e36;
+  color: #fff;
 }
 
 .kt-amt-select .kt-don-amt {
-	color: #fff;
+  color: #fff;
 }
 
 .kt-don-but-img {
-	height: auto;
-	width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .kt-button-cont {
-	width: 90%;
-	margin: auto;
-	transition: width 0.75s;
+  width: 90%;
+  margin: auto;
+  transition: width 0.75s;
 }
 
 .kt-amt-select .kt-don-row-but .kt-button-cont {
-	width: 97%;
+  width: 97%;
 }
 
 .kt-hidden {
-	display: none;
+  display: none;
 }
 
 .kt-don-row button {
-	background-color: initial;
-	padding: 0;
-	width: 50%;
+  background-color: initial;
+  padding: 0;
+  width: 50%;
 }
 
 @media screen and (min-width: 768px) {
+  .kt-don-row button {
+    width: 100%;
+  }
 
-	.kt-don-row button {
-		width: 100%;
-	}
+  .kt-don-row .kt-don-text {
+    padding-left: var(--don-text-padding-lr-dt);
+    padding-right: var(--don-text-padding-lr-dt);
+  }
 
-	.kt-don-row .kt-don-text {
-		padding-left: var(--don-text-padding-lr-dt);
-		padding-right: var(--don-text-padding-lr-dt);
-	}
+  .kt-don-cust-el input {
+    width: 75%;
+  }
 
-	.kt-don-cust-el input {
-		width: 75%;
-	}
+  /* Begin rules to ensure donate buttons are aligned. */
+  .kt-don-row .elementor-column-wrap {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-	/* Begin rules to ensure donate buttons are aligned. */
-	.kt-don-row .elementor-column {
-		height: var(--don-height);
-		display: var(--don-display);
-		flex-direction: var(--don-flex-direction);
-	}
+  .kt-don-row .elementor-widget-wrap {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-	.kt-don-row .elementor-column-wrap {
-		height: var(--don-height);
-		display: var(--don-display);
-		flex-direction: var(--don-flex-direction);
-	}
+  .kt-amt {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-	.kt-don-row .elementor-widget-wrap {
-		height: var(--don-height);
-		display: var(--don-display);
-		flex-direction: var(--don-flex-direction);
-	}
+  .kt-don-row .kt-amt .elementor-widget-container {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-	.kt-amt {
-		height: var(--don-height);
-		display: var(--don-display);
-		flex-direction: var(--don-flex-direction);
-	}
+  .kt-don-row .kt-amt .elementor-image-box-wrapper {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 
-	.kt-don-row .kt-amt .elementor-widget-container {
-		height: var(--don-height);
-		display: var(--don-display);
-		flex-direction: var(--don-flex-direction);
-	}
-
-	.kt-don-row .kt-amt .elementor-image-box-wrapper {
-		height: var(--don-height);
-		display: var(--don-display);
-		flex-direction: var(--don-flex-direction);
-	}
-
-	.kt-don-row .elementor-widget-image-box .elementor-image-box-content {
-		height: var(--don-height);
-		display: var(--don-display);
-		flex-direction: var(--don-flex-direction);
-	}
-
-	.kt-don-row .kt-don-text {
-		/* flex: 1; */
-	}
+  .kt-don-row .elementor-widget-image-box .elementor-image-box-content {
+    height: var(--don-height);
+    display: var(--don-display);
+    flex-direction: var(--don-flex-direction);
+  }
 }
 
 /* End rules to ensure donate buttons are aligned. */

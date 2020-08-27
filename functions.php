@@ -450,14 +450,15 @@ function kt_added_page_content ( $content ) {
 }
 add_filter( 'the_content', 'kt_added_page_content');
 
-
-// This function enqueues the JS file for the donate page.
-function kt_enqueue_script2() {
-  if (is_page('donate')) {
-    wp_enqueue_script( 'testy-js', '/wp-content/themes/spacious-child/assets/js/script-donate.js', array(), NULL, TRUE);
-  }
+/**
+ * Enqueues the JS file for the donate page.
+ */
+function kt_enqueue_donate() {
+	if ( is_page( 'donate' ) || is_page( 'donate-new' ) ) {
+		wp_enqueue_script( 'kt-script-donate', get_stylesheet_directory_uri() . '/assets/js/script-donate.js', array(), filemtime( get_stylesheet_directory() . '/assets/js/script-donate.js' ), true );
+	}
 }
-add_action( 'wp_enqueue_scripts', 'kt_enqueue_script2' );
+add_action( 'wp_enqueue_scripts', 'kt_enqueue_donate' );
 
 /**
  * Insert donate button markup into main menu.
