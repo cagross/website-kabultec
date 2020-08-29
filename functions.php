@@ -454,7 +454,7 @@ add_filter( 'the_content', 'kt_added_page_content');
  * Enqueues the JS file for the donate page.
  */
 function kt_enqueue_donate() {
-	if ( is_page( 'donate' ) || is_page( 'donate-new' ) ) {
+	if ( is_page( 'donate' ) ) {
 		wp_enqueue_script( 'kt-script-donate', get_stylesheet_directory_uri() . '/assets/js/script-donate.js', array(), filemtime( get_stylesheet_directory() . '/assets/js/script-donate.js' ), true );
 	}
 }
