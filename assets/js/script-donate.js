@@ -2,7 +2,7 @@
 {
   let i;
   const amounts = [];
-  amounts.a = 10;
+  amounts.a = 25;
   amounts.b = 50;
   amounts.c = 100;
 
