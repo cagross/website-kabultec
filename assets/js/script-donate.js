@@ -12,11 +12,12 @@
   const nameInput = document.querySelector(".kt-don-cust-el input");
   const donCards = document.querySelectorAll(".kt-amt");
 
-  // Set the value of the data-amt attribute on each donation card.
+  // Set the value of the data-amt attribute on each donation card, as well as the value of each card displayed on the page.
   for (const key in amounts) {
     const amtId = `kt-amt-${key}`;// Note that in the HTML markup, the ID on each donation card must start with `kt-amt-` and end with the donation amount of that specific card (e.g. 10, 50, etc).
     const amtEl = document.getElementById(amtId);
     amtEl.setAttribute("data-amt", `${amounts[key]}`);
+    amtEl.querySelector('.kt-don-amt').innerHTML = '$' + amounts[key];
   }
 
   // Set validation error messages, and under what conditions they should be displayed.

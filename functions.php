@@ -490,7 +490,7 @@ add_filter( 'wp_nav_menu', 'kt_menu_button' );
 
 /* Register a custom query string for Donate page URL:  'kt_cancel' */
 function kt_add_query_string( $qvars ) {
-  $qvars[] = 'kt_trans';
+  $qvars[] = 'kt_donation';
   return $qvars;
 }
 add_filter( 'query_vars', 'kt_add_query_string' );
@@ -498,17 +498,60 @@ add_filter( 'query_vars', 'kt_add_query_string' );
 function print_value() {
   if (is_page('donate')) {
     $my_val = get_query_var( 'kt_trans', 'not_set');
-    if ($my_val === 'cancel') {
-      error_log( print_r( '$my_val:', true ) );
-      error_log( print_r( $my_val, true ) );
-      error_log( print_r( gettype($my_val), true ) );
+    if ($my_val === 'cancel_transaction') {
+      // error_log( print_r( '$my_val:', true ) );
+      // error_log( print_r( $my_val, true ) );
+      // error_log( print_r( gettype($my_val), true ) );
       //Define a separate function to insert custom HTML.  Call that function here.
     }
   }
 }
-add_action( 'wp', 'print_value', 12 );
+// add_action( 'wp', 'print_value', 12 );
+// add_action( 'the_content', 'print_value', 12 );
+
+function filter_the_content( $content ) {
+ 
+    // Check if we're inside the main loop in a single Post.
+    // if ( is_singular() && in_the_loop() && is_main_query() ) {
+        // return $content . esc_html__( 'I’m filtering the content inside the main loop', 'wporg');
+        $content = "I’m filtering the content inside the main loop";
+        return $content;
+
+    // }
+ 
+    // return $content;
+}
+// add_filter( 'the_content', 'filter_the_content', 1 );
+
+
+
+
+
+//[foobar]
+function foobar_func( $atts ){
+  error_log( print_r( 'testy', true ) );
+  
+  $my_val = get_query_var( 'kt_donation', 'not_set');
+  if ($my_val === 'cancel_donation') {
+    // error_log( print_r( '$my_val:', true ) );
+    // error_log( print_r( $my_val, true ) );
+    // error_log( print_r( gettype($my_val), true ) );
+    //Define a separate function to insert custom HTML.  Call that function here.
+    echo "<div class='testclass'>Your donation was cancelled.</div>";
+
+
+  }
+  
+  
+  // echo "testy";
+  // return "foo and bar";
+  return;
+}
+add_shortcode( 'foobar', 'foobar_func' );
+
+
+
+
+
+
 /* End code to add custom content to Donate page for cancelled transactions. */
-
-
-
-
