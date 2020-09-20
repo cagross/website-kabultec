@@ -70,4 +70,12 @@
     }
   }
   /* End code governing on-hover effect of donation cards. */
+
+  // Ensure donation form is hidden until all JS loads.
+  let donEls = document.querySelectorAll('.kt-don-el');
+  if (donEls) {
+    for (i = 0; i < donEls.length; i++) {
+      donEls[i].classList.toggle("kt-hidden");
+    }
+  }
 }
