@@ -82,6 +82,19 @@ function add_googleanalytics() {
 </script>
 <?php }
 
+// add_action('wp_footer', 'add_googleanalytics_4');
+function add_googleanalytics_4() {
+  ?>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL6FCS96P8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RL6FCS96P8');
+  </script>
+<?php }
+
 // This function adds the post date to the top of each post.
 function post_date_top() {
   if (is_single()) {
@@ -202,15 +215,16 @@ function spacious_featured_image_slider() {
 }
 
 // Defer Javascripts
-if (!(is_admin() )) {
-    function defer_parsing_of_js ( $url ) {
-        if ( FALSE === strpos( $url, '.js' ) ) return $url;
-				if ( strpos( $url, 'jquery.js' ) ) return $url;//Do not defer jquery.js
-				if ( strpos( $url, 'google.com/recaptcha/api.js' ) ) return $url;//Do not defer Google reCAPTCHA code.  If you defer this, then it will not be properly applied on any page with a contact form.
-        return "$url' defer onload='";
-    }
-    add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
-}
+/* Issue: 10/3/21 disabled this code because with some scripts tags, this code was creating misformatted <script> tags, resulting in JS console errors.  See */
+// if (!(is_admin() )) {
+//     function defer_parsing_of_js ( $url ) {
+//         if ( FALSE === strpos( $url, '.js' ) ) return $url;
+// 				if ( strpos( $url, 'jquery.js' ) ) return $url;//Do not defer jquery.js
+// 				if ( strpos( $url, 'google.com/recaptcha/api.js' ) ) return $url;//Do not defer Google reCAPTCHA code.  If you defer this, then it will not be properly applied on any page with a contact form.
+//         return "$url' defer onload='";
+//     }
+//     add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+// }
 
 //Code to ensure Contact Form 7 JS and CSS files are loaded only on Contact page.
 add_filter( 'wpcf7_load_js', '__return_false' );
@@ -488,70 +502,35 @@ add_filter( 'wp_nav_menu', 'kt_menu_button' );
 
 /* Begin code to add custom content to Donate page for cancelled transactions. */
 
-/* Register a custom query string for Donate page URL:  'kt_cancel' */
+/**
+ * Register a custom query string for Donate page URL.
+ *
+ * @since 1.0.0
+ *
+ * @param array $qvars An array containing the existing query string variables.
+ * @return string Returns an array containing the query string variables, with the new query string added to the end of the array.
+ */
 function kt_add_query_string( $qvars ) {
   $qvars[] = 'kt_donation';
   return $qvars;
 }
 add_filter( 'query_vars', 'kt_add_query_string' );
 
-function print_value() {
+/**
+ * Enqueue the donation cancelled JS file when the donate page is loaded with the specified query string key/value pair.
+ *
+ * @since 1.0.0
+ *
+ */
+function kt_cancel_donation() {
   if (is_page('donate')) {
-    $my_val = get_query_var( 'kt_trans', 'not_set');
-    if ($my_val === 'cancel_transaction') {
-      // error_log( print_r( '$my_val:', true ) );
-      // error_log( print_r( $my_val, true ) );
-      // error_log( print_r( gettype($my_val), true ) );
-      //Define a separate function to insert custom HTML.  Call that function here.
+    $file_path_and_name = '/assets/js/script-donate-cancel.js';
+    $query_string_val = get_query_var( 'kt_donation', 'not_set');
+    if ($query_string_val === 'cancel_donation') {
+      wp_enqueue_script( 'kt-script-donate-cancel', get_stylesheet_directory_uri() . $file_path_and_name, array(), filemtime( get_stylesheet_directory() . $file_path_and_name ), true );
     }
   }
 }
-// add_action( 'wp', 'print_value', 12 );
-// add_action( 'the_content', 'print_value', 12 );
-
-function filter_the_content( $content ) {
- 
-    // Check if we're inside the main loop in a single Post.
-    // if ( is_singular() && in_the_loop() && is_main_query() ) {
-        // return $content . esc_html__( 'I’m filtering the content inside the main loop', 'wporg');
-        $content = "I’m filtering the content inside the main loop";
-        return $content;
-
-    // }
- 
-    // return $content;
-}
-// add_filter( 'the_content', 'filter_the_content', 1 );
-
-
-
-
-
-//[foobar]
-function foobar_func( $atts ){
-  error_log( print_r( 'testy', true ) );
-  
-  $my_val = get_query_var( 'kt_donation', 'not_set');
-  if ($my_val === 'cancel_donation') {
-    // error_log( print_r( '$my_val:', true ) );
-    // error_log( print_r( $my_val, true ) );
-    // error_log( print_r( gettype($my_val), true ) );
-    //Define a separate function to insert custom HTML.  Call that function here.
-    echo "<div class='testclass'>Your donation was cancelled.</div>";
-
-
-  }
-  
-  
-  // echo "testy";
-  // return "foo and bar";
-  return;
-}
-add_shortcode( 'foobar', 'foobar_func' );
-
-
-
-
-
+add_action( 'wp', 'kt_cancel_donation', 12 );
 
 /* End code to add custom content to Donate page for cancelled transactions. */
