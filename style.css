@@ -342,6 +342,10 @@ input[type="image"] {
 .kt_ga {
   font-style: italic;
 }
+/* Ensure the first slide in the slider has its title italicized. This is just a temporary solution to ensure the current first slide (Geof Uyehara blog post) has its title italicized. */
+#featured-slider .cycle-slide:first-of-type .entry-title span {
+  font-style: italic;
+}
 
 /* Ensure current page is underlined in page outlines. */
 .kt-page-tree-nav .current_page_item > a {
