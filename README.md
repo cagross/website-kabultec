@@ -104,3 +104,7 @@ Below is a curated list of key customizations applied to Kabultec's WordPress we
 - JavaScript
 - HTML
 - CSS
+
+## License
+
+This repo is licensed under the MIT license.
