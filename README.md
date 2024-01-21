@@ -24,13 +24,17 @@ Below is a curated list of key customizations applied to Kabultec's WordPress we
 
   - Logo Redesign: Implemented a redesigned logo, enhancing the organization's visual identity and conveying a more professional image across the site.
 
-  - Theme Redesign: Collaborated with web designer to revamp the main portions of the theme, including the header, footer, and main menu, providing a more visually appealing and user-friendly experience.
+  - Theme Redesign: Collaborated with web designer to revamp the main portions of the theme, including the header, footer, and main menu, providing a more visually appealing and user-friendly experience. See below for a before and after comparison.
 
-  - Donate Page Redesign: Worked with DESIGNER-B to re-envision and redesign the donate page, making it more professional, visually engaging, and streamlining the donation process for a better user experience.
+![Homepage before/after.](images-readme/homepage-before-after.png "Homepage before/after.")
+
+- Donate Page Redesign: Worked with DESIGNER-B to re-envision and redesign the donate page, making it more professional, visually engaging, and streamlining the donation process for a better user experience. See below for a before and after comparison.
+
+![Donate page before/after.](images-readme/donate-page-before-after.png "Donate page before/after.")
 
 - **Donation Page Integration with PayPal**
 
-  - I have enhanced the [Donations](https://kabultec.org/donate/) page to seamlessly integrate with PayPal's API, allowing users to make secure and convenient donations to support Kabultec's mission via PayPal.
+  - I enhanced the [Donations](https://kabultec.org/donate/) page to seamlessly integrate with PayPal's API, allowing users to make secure and convenient donations to support Kabultec's mission via PayPal.
 
 - **Customizing Footer Copyright**
 
