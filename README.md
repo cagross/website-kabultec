@@ -34,7 +34,9 @@ Below is a curated list of key customizations applied to Kabultec's WordPress we
 
 - **Donation Page Integration with PayPal**
 
-  - I enhanced the [Donations](https://kabultec.org/donate/) page to seamlessly integrate with PayPal's API, allowing users to make secure and convenient donations to support Kabultec's mission via PayPal.
+  - I enhanced the [Donate page](https://kabultec.org/donate/) to seamlessly integrate with PayPal's API, allowing users to quickly and securely make donations of preset (or custom) sizes to via PayPal. See below for a before and after comparison.
+
+  ![Donate page before/after.](images-readme/paypal-integration-before-after.png "Donate page before/after.")
 
 - **Customizing Footer Copyright**
 
