@@ -1,12 +1,17 @@
-# Kabultec Website Project
-
-## Overview
+<h1 align="center">Kabultec Website Project</h1>
 
 This repository contains the code for the Kabultec organization's WordPress website customization: [kabultec.org](https://kabultec.org). The site is built upon WordPress, and this repository captures the customizations made to enhance its functionality and appearance.
 
 Kabultec is a non-profit organization dedicated to promoting women's rights and education in Afghanistan.
 
-## Project Objectives
+## 📝 Table of Contents
+
+- [Project Objectives](#objectives)
+- [Technology Stack](#technology_stack)
+- [Customization Highlights](#customization)
+- [License](#license)
+
+## 🧐 Project Objectives <a name = "objectives"></a>
 
 - **Showcase Initiatives:** Highlight the organization's impactful initiatives, focusing on promoting women's rights and education in Afghanistan.
 
@@ -16,7 +21,17 @@ Kabultec is a non-profit organization dedicated to promoting women's rights and 
 
 - **Inform Stakeholders:** Keep stakeholders well-informed about ongoing Kabultec programs, upcoming events, and recaps of past activities, including fundraising events.
 
-## Customization Highlights
+## :information_source: Technology Stack <a name = "technology_stack"></a>
+
+|                                                                                                 |                                                        |                                |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------ |
+| ![WordPress logo.](images-readme/wordpress-logotype-wmark-white-600.png "WordPress logo.")      | [WordPress](https://wordpress.org/)                    | Content Management System      |
+| ![PHP logo.](images-readme/php-logo-600.png "PHP logo")                                         | [PHP](https://php.net/)                                | Server-Side Scripting Language |
+| ![JavaScript logo.](images-readme/javascript-logo-600.png "JavaScript logo")                    | [JavaScript](https://en.wikipedia.org/wiki/JavaScript) | Client-Side Scripting Language |
+| ![MySQL logo.](images-readme/mysql-logo-600.png "MySQL logo.")                                  | [MySQL](https://www.mongodb.com/)                      | Database                       |
+| ![Apache HTTP Server logo.](images-readme/apache-httpd-logo-600.png "Apache HTTP Server logo.") | [Apache HTTP Server](https://httpd.apache.org/)        | Web Server Technology          |
+
+## :sparkles: Customization Highlights <a name = "customization"></a>
 
 Below is a curated list of key customizations applied to Kabultec's WordPress website, enhancing its functionality, appearance, and user experience.
 
@@ -104,13 +119,6 @@ Below is a curated list of key customizations applied to Kabultec's WordPress we
 
     - Enhance the HTML structure by encapsulating the featured image in a `figure` element, providing better semantics and styling opportunities.
 
-## Technologies Used
-
-- PHP
-- JavaScript
-- HTML
-- CSS
-
-## License
+## ⚖️ License <a name = "license"></a>
 
 This repo is licensed under the MIT license.
