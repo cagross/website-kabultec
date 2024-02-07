@@ -25,11 +25,11 @@ Kabultec is a non-profit organization dedicated to promoting women's rights and 
 
 |                                                                                                 |                                                        |                                |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------ |
-| ![WordPress logo.](images-readme/wordpress-logotype-wmark-white-600.png "WordPress logo.")      | [WordPress](https://wordpress.org/)                    | Content Management System      |
-| ![PHP logo.](images-readme/php-logo-600.png "PHP logo")                                         | [PHP](https://php.net/)                                | Server-Side Scripting Language |
-| ![JavaScript logo.](images-readme/javascript-logo-600.png "JavaScript logo")                    | [JavaScript](https://en.wikipedia.org/wiki/JavaScript) | Client-Side Scripting Language |
-| ![MySQL logo.](images-readme/mysql-logo-600.png "MySQL logo.")                                  | [MySQL](https://www.mongodb.com/)                      | Database                       |
-| ![Apache HTTP Server logo.](images-readme/apache-httpd-logo-600.png "Apache HTTP Server logo.") | [Apache HTTP Server](https://httpd.apache.org/)        | Web Server Technology          |
+| ![WordPress logo.](images-readme/wordpress-logotype-wmark-white-100.png "WordPress logo.")      | [WordPress](https://wordpress.org/)                    | Content Management System      |
+| ![PHP logo.](images-readme/php-logo-100.png "PHP logo")                                         | [PHP](https://php.net/)                                | Server-Side Scripting Language |
+| ![JavaScript logo.](images-readme/javascript-logo-100.png "JavaScript logo")                    | [JavaScript](https://en.wikipedia.org/wiki/JavaScript) | Client-Side Scripting Language |
+| ![MySQL logo.](images-readme/mysql-logo-100.png "MySQL logo.")                                  | [MySQL](https://www.mongodb.com/)                      | Database                       |
+| ![Apache HTTP Server logo.](images-readme/apache-httpd-logo-100.png "Apache HTTP Server logo.") | [Apache HTTP Server](https://httpd.apache.org/)        | Web Server Technology          |
 
 ## :sparkles: Customization Highlights <a name = "customization"></a>
 
