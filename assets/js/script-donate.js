@@ -14,10 +14,10 @@
 
   // Set the value of the data-amt attribute on each donation card, as well as the value of each card displayed on the page.
   for (const key in amounts) {
-    const amtId = `kt-amt-${key}`;// Note that in the HTML markup, the ID on each donation card must start with `kt-amt-` and end with the donation amount of that specific card (e.g. 10, 50, etc).
+    const amtId = `kt-amt-${key}`; // Note that in the HTML markup, the ID on each donation card must start with `kt-amt-` and end with the donation amount of that specific card (e.g. 10, 50, etc).
     const amtEl = document.getElementById(amtId);
     amtEl.setAttribute("data-amt", `${amounts[key]}`);
-    amtEl.querySelector('.kt-don-amt').innerHTML = '$' + amounts[key];
+    amtEl.querySelector(".kt-don-amt").innerHTML = "$" + amounts[key];
   }
 
   // Set validation error messages, and under what conditions they should be displayed.
@@ -27,7 +27,9 @@
       el.setCustomValidity("This field cannot be blank.");
     }
     if (el.validity.rangeUnderflow) {
-      el.setCustomValidity("Please enter a value greater than or equal to $1.00.");
+      el.setCustomValidity(
+        "Please enter a value greater than or equal to $1.00.",
+      );
     }
   });
 
@@ -49,7 +51,7 @@
         return;
       }
     } else {
-      donForm.amount.value = amountEl.dataset.amt
+      donForm.amount.value = amountEl.dataset.amt;
     }
     return donForm.submit();
   }
@@ -72,7 +74,7 @@
   /* End code governing on-hover effect of donation cards. */
 
   // Ensure donation form is hidden until all JS loads.
-  let donEls = document.querySelectorAll('.kt-don-el');
+  let donEls = document.querySelectorAll(".kt-don-el");
   if (donEls) {
     for (i = 0; i < donEls.length; i++) {
       donEls[i].classList.toggle("kt-hidden");
