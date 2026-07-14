@@ -21,17 +21,20 @@
   }
 
   // Set validation error messages, and under what conditions they should be displayed.
-  nameInput.addEventListener("invalid", (e) => {
-    const el = e.target;
-    if (el.validity.valueMissing) {
-      el.setCustomValidity("This field cannot be blank.");
-    }
-    if (el.validity.rangeUnderflow) {
-      el.setCustomValidity(
-        "Please enter a value greater than or equal to $1.00.",
-      );
-    }
-  });
+  // TEMP STOPGAP: nameInput can be null while the custom-amount <input> is broken upstream (see donate-page-issue.md).
+  if (nameInput) {
+    nameInput.addEventListener("invalid", (e) => {
+      const el = e.target;
+      if (el.validity.valueMissing) {
+        el.setCustomValidity("This field cannot be blank.");
+      }
+      if (el.validity.rangeUnderflow) {
+        el.setCustomValidity(
+          "Please enter a value greater than or equal to $1.00.",
+        );
+      }
+    });
+  }
 
   // Assign onclick function to each button on page.  Onclick function assigns the correct donation amount to the form, then submits the form.
   for (i = 0; i < buttons.length; i++) {
@@ -43,6 +46,10 @@
     const amountEl = this.closest(".kt-amt");
 
     if (this === buttCustom) {
+      // TEMP STOPGAP: silently no-op if the custom-amount input isn't present (see donate-page-issue.md).
+      if (!nameInput) {
+        return;
+      }
       nameInput.setCustomValidity("");
       if (nameInput.checkValidity()) {
         donForm.amount.value = amountEl.querySelector("input").value;
