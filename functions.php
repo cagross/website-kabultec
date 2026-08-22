@@ -516,6 +516,6 @@ function kt_cancel_donation() {
     }
   }
 }
-add_action( 'wp', 'kt_cancel_donation', 12 );
+// add_action( 'wp', 'kt_cancel_donation', 12 );
 
 /* End code to add custom content to Donate page for cancelled transactions. */
