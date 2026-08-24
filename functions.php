@@ -6,10 +6,10 @@ function theme_enqueue_styles() {
 
 }
 
-// This locks down my entire site to non-registered users.  This particular code works for any dev site that is located on a sub-folder named 'dev.'
-// if (preg_match('/\/dev\//', ABSPATH)) {
+// This locks down the entire site to non-registered users, except in production.
+if ( wp_get_environment_type() !== 'production' ) {
 	add_action( 'template_redirect', 'redirect_func' );
-// }
+}
 function redirect_func() {
 	if( ! is_user_logged_in() && !( $GLOBALS['pagenow'] === 'wp-login.php') ) { if ( ! is_public_page_post() ) { auth_redirect(); } }
 }
