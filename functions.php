@@ -67,7 +67,9 @@ function spacious_render_header_image() {
     endif;
 /****************************************************************************************/
 
-// add_action('wp_footer', 'add_googleanalytics_4');
+if ( wp_get_environment_type() === 'production' ) {
+	add_action('wp_footer', 'add_googleanalytics_4');
+}
 function add_googleanalytics_4() {
   ?>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL6FCS96P8"></script>
