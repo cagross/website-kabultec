@@ -122,5 +122,3 @@ Below is a curated list of key customizations applied to Kabultec's WordPress we
 ## ⚖️ License <a name = "license"></a>
 
 This repo is licensed under the MIT license.
-
-Test line.
