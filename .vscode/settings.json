@@ -1,0 +1,6 @@
+{
+    "[php]": {
+        "editor.formatOnSave": true
+    },
+    "markdown.styles": [".vscode/markdown-preview.css"]
+}
