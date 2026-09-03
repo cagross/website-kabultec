@@ -24,7 +24,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<?php
 	/**
-	 * This hook is important for wordpress plugins and other many things
+	 * This hook is important for WordPress plugins and other many things
 	 */
 	wp_head();
 	?>
@@ -75,7 +75,12 @@ if ( function_exists( 'wp_body_open' ) ) {
 					<nav class="small-menu" class="clearfix">
 						<?php
 						if ( has_nav_menu( 'header' ) ) {
-							wp_nav_menu( array( 'theme_location' => 'header', 'depth' => - 1 ) );
+							wp_nav_menu(
+								array(
+									'theme_location' => 'header',
+									'depth'          => - 1,
+								)
+							);
 						}
 						?>
 					</nav>
@@ -83,9 +88,11 @@ if ( function_exists( 'wp_body_open' ) ) {
 			</div>
 		<?php } ?>
 
-		<?php if ( 'above' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
+		<?php
+		if ( 'above' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
 			spacious_render_header_image();
-		} ?>
+		}
+		?>
 
 		<div id="header-text-nav-container" class="<?php echo ( spacious_options( 'spacious_one_line_menu_setting', 0 ) == 1 ) ? 'menu-one-line' : ''; ?>">
 
@@ -94,12 +101,15 @@ if ( function_exists( 'wp_body_open' ) ) {
 				<div id="header-text-nav-wrap" class="clearfix">
 					<div id="header-left-section">
 						<?php
-						if ( ( 'both' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) || 'logo_only' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) ) ) { ?>
+						if ( ( 'both' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) || 'logo_only' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) ) ) {
+							?>
 							<div id="header-logo-image">
 
-								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
+								<?php
+								if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
 									spacious_the_custom_logo();
-								} ?>
+								}
+								?>
 
 							</div><!-- #header-logo-image -->
 
@@ -109,25 +119,28 @@ if ( function_exists( 'wp_body_open' ) ) {
 						$screen_reader = '';
 						if ( ( 'logo_only' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) || 'none' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) ) ) {
 							$screen_reader = 'screen-reader-text';
-						} ?>
+						}
+						?>
 
 						<div id="header-text" class="<?php echo $screen_reader; ?>">
 							<?php if ( is_front_page() || is_home() ) : ?>
 								<h1 id="site-title">
 									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-									   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-									   rel="home"><?php bloginfo( 'name' ); ?></a>
+										title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+										rel="home"><?php bloginfo( 'name' ); ?></a>
 								</h1>
 							<?php else : ?>
 								<h3 id="site-title">
 									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-									   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-									   rel="home"><?php bloginfo( 'name' ); ?></a>
+										title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+										rel="home"><?php bloginfo( 'name' ); ?></a>
 								</h3>
-							<?php endif;
+								<?php
+							endif;
 
 							$description = get_bloginfo( 'description', 'display' );
-							if ( $description || is_customize_preview() ) : ?>
+							if ( $description || is_customize_preview() ) :
+								?>
 							<p id="site-description"><?php echo $description; ?></p>
 							<?php endif; ?><!-- #site-description -->
 						</div><!-- #header-text -->
@@ -140,12 +153,13 @@ if ( function_exists( 'wp_body_open' ) ) {
 							<div id="header-right-sidebar" class="clearfix">
 								<?php
 								// Calling the header sidebar if it exists.
-								if ( ! dynamic_sidebar( 'spacious_header_sidebar' ) ):
+								if ( ! dynamic_sidebar( 'spacious_header_sidebar' ) ) :
 								endif;
 								?>
 							</div>
 							<?php
-						} ?>
+						}
+						?>
 
 						<?php if ( 'four' !== spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
 							<div class="header-action">
@@ -166,9 +180,11 @@ if ( function_exists( 'wp_body_open' ) ) {
 							</div>
 						<?php endif; ?>
 
-						<?php if ( ! ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) ) :
+						<?php
+						if ( ! ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) ) :
 							spacious_main_nav();
-						endif; ?>
+						endif;
+						?>
 
 					</div><!-- #header-right-section -->
 
@@ -200,9 +216,11 @@ if ( function_exists( 'wp_body_open' ) ) {
 			<?php endif; ?>
 		</div><!-- #header-text-nav-container -->
 
-		<?php if ( 'below' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
+		<?php
+		if ( 'below' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
 			spacious_render_header_image();
-		} ?>
+		}
+		?>
 
 		<?php
 		if ( spacious_options( 'spacious_activate_slider', '0' ) == '1' ) {
@@ -210,17 +228,16 @@ if ( function_exists( 'wp_body_open' ) ) {
 				if ( is_home() || is_front_page() ) {
 					spacious_featured_image_slider();
 				}
-			} else {
-				if ( is_front_page() ) {
+			} elseif ( is_front_page() ) {
 					spacious_featured_image_slider();
-				}
 			}
 		}
 
 		// if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! spacious_options( 'spacious_header_title_hide', 0 ) ) ) {
 		/* Ensure the title bar does not display on Donate page.  Do this by replacing the above IF statement with one that also ensures the page is not the Donate page. */
 		if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! spacious_options( 'spacious_header_title_hide', 0 ) ) && ! is_page( 'donate' ) ) {
-			if ( ! ( spacious_options( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
+			if ( ! ( spacious_options( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) {
+				?>
 				<div class="header-post-title-container clearfix">
 					<div class="inner-wrap">
 						<div class="post-title-wrapper">
@@ -236,9 +253,11 @@ if ( function_exists( 'wp_body_open' ) ) {
 							}
 							?>
 						</div>
-						<?php if ( function_exists( 'spacious_breadcrumb' ) ) {
+						<?php
+						if ( function_exists( 'spacious_breadcrumb' ) ) {
 							spacious_breadcrumb();
-						} ?>
+						}
+						?>
 					</div>
 				</div>
 				<?php
