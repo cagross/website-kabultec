@@ -9,6 +9,21 @@
   const donForm = document.getElementById("myForm");
   const buttons = document.querySelectorAll(".kt-don-row-but button");
 
+  // TEMP STOPGAP: Elementor strips this <input> from the Description field on
+  // save (see donate-page-issue.md). Recreate it here so it exists before
+  // anything below queries for it.
+  const custAmtContainer = document.querySelector("#kt-amt-cust .kt-don-cust-el");
+  if (custAmtContainer && !custAmtContainer.querySelector("input")) {
+    const custInput = document.createElement("input");
+    custInput.setAttribute("type", "number");
+    custInput.setAttribute("id", "fname");
+    custInput.setAttribute("name", "fname");
+    custInput.setAttribute("form", "myForm");
+    custInput.setAttribute("required", "");
+    custInput.setAttribute("min", "1");
+    custAmtContainer.appendChild(custInput);
+  }
+
   const nameInput = document.querySelector(".kt-don-cust-el input");
   const donCards = document.querySelectorAll(".kt-amt");
 

@@ -690,6 +690,10 @@ for mobile layouts.*/
   justify-content: center;
 }
 
+.kt-don-cust-el::before {
+  content: "$";
+}
+
 .kt-don-cust-el input {
   margin: 0;
   padding: 0;
